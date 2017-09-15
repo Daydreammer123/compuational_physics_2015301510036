@@ -12,7 +12,7 @@
 ---
 # Homework List
 
-* [Exercise_01](https://compuational_physics_2015301510036/README.md ):注册github,书写自己的第一个README.md.
+* [Exercise_01](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/README.md ):注册github,书写自己的第一个README.md.
 * [Exercise_02](https://?):进行python语法练习（I）.
 * [Exercise_03](https://?):进行python语法练习（II）,在屏幕上用字符拼出自己姓名的英文,任意次序的姓名,你想画的东西.
 * [Exercise_04](https://?): Chapter 1,用matplotlib完成图片的各种细节.
