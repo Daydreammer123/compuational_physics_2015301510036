@@ -12,18 +12,20 @@
 ---
 # Homework List
 
-[Exercise_01：注册ｇｉｔｈａｂ建立一个ｒｅａｄｍｅ．ｅｄ](https://?).\
-[Exercise_02](https://?).\
-[Exercise_03:All levels](https://?).\
-[Exercise_04: Chapter 1problem 1.5: The decay of two kinds of particles](https://?).\
-[Exercise_05: Chapter 1problem 1.6: Population growth](https://?).\
-[Exercise_06: Chapter 2 problem 2.9 & 2.10: The cannon](https://?).\
-[Exercise_07: Chapter 2 problem 2.19: The spin of baseball and Visual motion of baseball](https://?).\
-[Exercise_08: Chapter 3 problem 3.4: Non-linear oscillator](https://?).\
-[Exercise_09: Chapter 3 problem 3.16: Strange attractor](https://?).\
-[Exercise_10: Chapter 3 problem 3.31: Billiard ball on diverse table](https://?).\
-[Exercise_11: Chapter 4 problem 4.11: The percession of Mercury](https://?).\
-[Exercise_12: Chapter 4 problem 4.18: The Kirkwood Gap](https://?).\
-[Exercise_13: Chapter 5 problem 5.7: The Jacobi method v.s.The SOR algorithm](https://?).\
-[Exercise_14: Chapter 6 problem 6.15: The realistic string problem e Final Project: 用轨道能量分析Kirkwood Gap的缝宽](https://?).\
-
+* [Exercise_01](https://?):注册github,书写自己的第一个README.md.
+* [Exercise_02](https://?):进行python语法练习（I）.
+* [Exercise_03](https://?):进行python语法练习（II）,在屏幕上用字符拼出自己姓名的英文,任意次序的姓名,你想画的东西.
+* [Exercise_04](https://?): Chapter 1,用matplotlib完成图片的各种细节.
+* [Exercise_05](https://?): Chapter 1,熟练撰写markdown文档.
+* [Exercise_06](https://?): Chapter 2 problem 2.9题,problem 2.10题强化版,发展“超级辅助精确打击系统”.
+* [Exercise_07](https://?): Chapter 2 problem 2.19,使用vpython可视化炮弹发射或者棒球运动.
+* [Exercise_08](https://?): Chapter 3 problem 3.7,problem 3.8.
+* [Exercise_09](https://?): Chapter 3 problem 3.12,problem 3.16,problem 3.21.
+* [Exercise_10](https://?): Chapter 3 problem 3.26,problem 3.29,problem 3.31,将以上题目使用vpython进行一个3D展示.
+* [Exercise_11](https://?): Chapter 4 problem 4.7,problem 4.9,problem 4.11.
+* [Exercise_12](https://?): Chapter 4 problem 4.18: The Kirkwood Gap.
+* [Exercise_13](https://?): Chapter 5 problem 5.3,problem 5.7,problem 5.16.
+* [Exercise_14](https://?): Chapter 6 problem 6.6,problem 6.12,problem 6.16.
+* [Exercise_15](https://?): Chapter 7 problem 7.3,problem 7.6,problem 7.10,problem 7.13.
+---
+* [期末论文](https://?): 自由选题（可以综合书上习题），程序必须自己编写，A4两张双面打印（四面），论文写作规范.
