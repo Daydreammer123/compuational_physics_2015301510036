@@ -1,4 +1,4 @@
-### 第二次作业
+## 第二次作业
 
 ### 摘要
 在屏幕上用字符拼出任自己的名字
@@ -19,5 +19,11 @@ print("   # # # # #  #           #     #  #  # ")
 
 效果图[alt text](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/02-1.png)
 
-[或者戳这里](https://www.zybuluo.com/lilyechoC/note/885356 )
 
+* 2、进阶版
+```python
+>>> a="qiaominchen"
+>>> for i in range(len(a)):
+    print(a[i])
+```   
+效果图
