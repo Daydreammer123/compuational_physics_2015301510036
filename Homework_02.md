@@ -16,8 +16,7 @@ print(" #        #   #   #   #   #  #          ")
 print(" #      # #   #     #     #   #         ")
 print("   # # # # #  #           #     #  #  # ")
 ```
-
-效果图 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/02-1.png)
+效果图： ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/02-1.png)
 
 * 2、进阶版
 ```python
@@ -25,4 +24,4 @@ print("   # # # # #  #           #     #  #  # ")
 >>> for i in range(len(a)):
     print(a[i])
 ```   
-效果图
+效果图： ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/02-2.png)
