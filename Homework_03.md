@@ -86,7 +86,7 @@ time.sleep(0.5)
 ```
 效果图：
 
-![image](网页)
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/03_1.gif)
 
 * 2、进阶版
 ```python
@@ -339,12 +339,13 @@ screen(input_)
 ```   
 效果图：
 
-![image](网页)
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/03_2.gif)
 
 
 ### 四、总结
     遇到了很多报错，搜索着一个个的修正了。\
     心在做gif方面还是有些波折，不知道到底要怎么运行程序呈现出来gif的感觉。\
+    另外，软件是前几天写的，前几天运行的时候是字母集中显示在一个框框，就正常的屏幕里面上下左右动，今天做动图的时候，无论Spyder、jupyter、python，都变成了这种不清屏而是一连串下来的效果，真心不知道为什么，想问一下这个问题。
     
     
 ### 五、致谢
