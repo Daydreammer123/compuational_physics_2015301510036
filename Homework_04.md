@@ -10,11 +10,10 @@
 
 ### 三、正文
 * Euler Method的近似解
------
 >v(t+dt)=v(t)+gdt\
 直接求得的解析解\
 >v=-gt
------
+
 * 以下是Python程序：
 ```python
 import numpy as np
@@ -54,19 +53,10 @@ Now you can draw your curve\
 input g:9.8\
 input v0:0
 
+
 * 结果分析：
 近似解与解析解满足相同的线性关系
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/04-1.png)
-
-* 2、进阶版
-```python
->>> a="qiaominchen"
->>> for i in range(len(a)):
-    print(a[i])
-```   
-效果图：
-
-![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/02-2.png)
 
 
 ### 四、总结
