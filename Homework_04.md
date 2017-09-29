@@ -129,3 +129,4 @@ pl.show()
 ```
    
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/04-2.png)   
+谢谢老师ORZ
