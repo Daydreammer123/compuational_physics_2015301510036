@@ -1,7 +1,7 @@
 ## 第四次作业
 
 ### 一、摘要
-   T1.1、地球表面自由落体的问题
+   T1.1、地球表面自由落体的问题\
     自由落体运动（Free falling movement）,运用Euler Method求出1.1题的近似解，并与其精确解对照。
 
 ### 二、背景介绍
@@ -11,9 +11,8 @@
 ### 三、正文
 * Euler Method的近似解
 -----
->v(t+dt)=v(t)+gdt
-
-直接求得的解析解
+>v(t+dt)=v(t)+gdt\
+直接求得的解析解\
 >v=-gt
 -----
 * 以下是Python程序：
@@ -50,9 +49,9 @@ g = input('input g:')
 v0 = input('input v0:')
 draw_pic(g,v0)
 ```
-得到
-Now you can draw your curve
-input g:9.8
+得到\
+Now you can draw your curve\
+input g:9.8\
 input v0:0
 
 * 结果分析：
