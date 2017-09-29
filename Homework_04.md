@@ -64,3 +64,12 @@ input v0:0
     
 ### 五、致谢
     感谢方勃的指导。
+
+
+---
+
+   >PS.\
+   做完第一题之后觉得有些简单了，于是开始思考蔡老师在课堂上提到的第五题，\
+   然而程序老是报错TAT，和同学讨论他们也解决不了。\
+   还是贴出来图吧证明我到此一游TAT
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/04-2.png)   
