@@ -12,11 +12,11 @@
 ---
 # Homework List
 
-* [Exercise_01](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/README.md ):注册github,书写自己的第一个README.md.
-* [Exercise_02](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/Homework_02.md):屏幕打名字.\
+- [x] [Exercise_01](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/README.md ):注册github,书写自己的第一个README.md.
+- [x] [Exercise_02](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/Homework_02.md):屏幕打名字.\
 或者[上一个无法运行戳这里](https://www.zybuluo.com/lilyechoC/note/885356)
-* [Exercise_03](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/Homework_03.md):在屏幕上，让你的名字.gif起来.
-* [Exercise_04](https://https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/Homework_04.md): 第一章课后习题.\
+- [x] [Exercise_03](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/Homework_03.md):在屏幕上，让你的名字.gif起来.
+- [x] [Exercise_04](https://https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/Homework_04.md): 第一章课后习题.\
 非常抱歉 上个星期忘记更新readme里的链接，但确实上周就已完成并放在在软件池中，麻烦老师再看一下，万分感谢！
 * [Exercise_05](https://?): Chapter 1,熟练撰写markdown文档.
 * [Exercise_06](https://?): Chapter 2 problem 2.9题,problem 2.10题强化版,发展“超级辅助精确打击系统”.
