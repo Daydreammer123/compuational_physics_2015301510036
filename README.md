@@ -13,8 +13,7 @@
 # Homework List
 
 * [Exercise_01](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/README.md ):注册github,书写自己的第一个README.md.
-* [Exercise_02](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/Homework_02.md):屏幕打名字.
-
+* [Exercise_02](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/Homework_02.md):屏幕打名字.\
 或者[上一个无法运行戳这里](https://www.zybuluo.com/lilyechoC/note/885356)
 * [Exercise_03](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/Homework_03.md):在屏幕上，让你的名字.gif起来.
 * [Exercise_04](https://https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/Homework_04.md): 第一章课后习题.\
