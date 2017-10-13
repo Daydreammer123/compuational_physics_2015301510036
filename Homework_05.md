@@ -11,11 +11,9 @@
 
 ### 三、正文
 * 1、当不考虑空气阻力时，数值求解二阶线性常微分方程组： 
-$$E=mc^2$$
-\frac{\mathrm{d^2} x}{\mathrm{d} t^2}=0
-
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/511.png)
 可以把它化为四个一阶常微分方程: 
-
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/512.png)
 式中vx和vy分别为速度的水平和垂直分量。使用欧拉法，将每个方程写为有限小量形式，以计算每隔dt炮弹位置和速度的变化，给定位置和速度的初始值，计算此后的运动状态。当dt足够小时，用欧拉法数值计算的结果趋近于真实（解析）解。 
 无阻力情况代码：
 ```python
@@ -124,14 +122,14 @@ show()
 
 无阻力情况效果图：
 
-![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/05-1.pgn)
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/5-1.png)
  
 由图可以看出：45度角是无阻力情况的最大发射角；而且相加为90度的射程相同。
 
 * 2、当考虑空气阻力时： 
-
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/521.png)
 化为微分表达式： 
-
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/522.png)
 有阻力情况代码：
 ```python
 g = 9.8
@@ -285,15 +283,14 @@ ylabel('y(km)')
 show()
 ```
 无阻力情况效果图：
-![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/05-2.pgn)
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/5-2.png)
 
 可以看出：还是45度为最大发射角，但是“相加为90的射程相同”不成立。
 * 3、考虑绝热模型： 
 空气密度随高度变化的关系为：
-
-
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/531.png)
 故微分方程的修改项变为：
-
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/532.png)
 绝热模型代码:
 ```python
 g = 9.8
@@ -397,7 +394,7 @@ show()
 
 ```
 绝热模型效果图 ：
-![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/03_1.gif)
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/5-3.png)
 
 * 4、绝热情况下的最大发射角： 
 绝热模型最大发射角代码：
@@ -513,7 +510,7 @@ ylim(0,18000)
 show()
 ```
 绝热模型最大发射角效果图：
-![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/03_1.gif)
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/5-4.png)
 
 可以看出：最大发射角可能不再是45度，随参数的变化而变化。
 
@@ -522,5 +519,4 @@ show()
 见上面的情况分析
 
 ### 五、致谢
-
-朱楚楚同学和郭帅斐同学
+    感谢王智麟同学~
