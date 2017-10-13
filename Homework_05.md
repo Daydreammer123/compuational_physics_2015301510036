@@ -134,7 +134,155 @@ show()
 
 有阻力情况代码：
 ```python
+g = 9.8
+b2m = 1e-5
 
+class flight_state:
+    def __init__(self, _x = 0, _y = 0, _vx = 0, _vy = 0, _t = 0):
+        self.x = _x
+        self.y = _y
+        self.vx = _vx
+        self.vy = _vy
+        self.t = _t
+
+class cannon:
+    def __init__(self, _fs = flight_state(0, 0, 0, 0, 0), _dt = 0.1):
+        self.cannon_flight_state = []
+        self.cannon_flight_state.append(_fs)
+        self.dt = _dt
+        #print self.cannon_flight_state[-1].x, self.cannon_flight_state[-1].y, self.cannon_flight_state[-1].vx, self.cannon_flight_state[-1].vy
+
+    def next_state(self, current_state):
+        global g
+        next_x = current_state.x + current_state.vx * self.dt
+        next_vx = current_state.vx
+        next_y = current_state.y + current_state.vy * self.dt
+        next_vy = current_state.vy - g * self.dt
+        next_t = current_state.t + self.dt
+        #print next_x, next_y
+        return flight_state(next_x, next_y, next_vx, next_vy, next_t)
+
+    def shoot(self):
+        while not(self.cannon_flight_state[-1].y < 0):
+            self.cannon_flight_state.append(self.next_state(self.cannon_flight_state[-1]))
+        r = - self.cannon_flight_state[-2].y / self.cannon_flight_state[-1].y
+        self.cannon_flight_state[-1].x = (self.cannon_flight_state[-2].x + r * self.cannon_flight_state[-1].x) / (r + 1)
+        self.cannon_flight_state[-1].y = 0
+        #print self.cannon_flight_state[-1].x, self.cannon_flight_state[-1].y, self.cannon_flight_state[-1].vx, self.cannon_flight_state[-1].vy
+
+
+    def show_trajectory(self):
+        global x,y        
+        x = []
+        y = []
+        for fs in self.cannon_flight_state:
+            x.append(fs.x)
+            y.append(fs.y)
+
+class drag_cannon(cannon):
+    def next_state(self, current_state):
+        global g, b2m
+        v = sqrt(current_state.vx * current_state.vx + current_state.vy * current_state.vy)
+        next_x = current_state.x + current_state.vx * self.dt
+        next_vx = current_state.vx - b2m * v * current_state.vx * self.dt
+        next_y = current_state.y + current_state.vy * self.dt
+        next_vy = current_state.vy - g * self.dt - b2m * v * current_state.vy * self.dt
+        #print next_x, next_y
+        return flight_state(next_x, next_y, next_vx, next_vy, current_state.t + self.dt)
+
+class adiabatic_drag_cannon(cannon):
+    def next_state(self, current_state):
+        pass
+
+
+a = cannon(flight_state(0, 0, 900*cos(pi*30/180), 900*sin(pi*30/180), 0), _dt = 0.1)
+a.shoot()
+a.show_trajectory()
+plot(x,y,'r',label = r'$\theta=30^\circ$')
+legend(loc = 'best', prop = {'size':11}, frameon = False)
+a_final = x[-1]
+
+b = drag_cannon(flight_state(0, 0, 900*cos(pi*30/180), 900*sin(pi*30/180), 0), _dt = 0.1)
+b.shoot()
+b.show_trajectory()
+plot(x,y,'r--', label = r'$drag\theta=30^\circ$')
+legend(loc = 'best', prop = {'size':11}, frameon = False)
+b_final = x[-1]
+
+a = cannon(flight_state(0, 0, 900*cos(pi*35/180), 900*sin(pi*35/180), 0), _dt = 0.1)
+a.shoot()
+a.show_trajectory()
+plot(x,y,'b',label=r'$\theta=35^\circ$')
+legend(loc='best',prop={'size':11},frameon=False)
+a_final=x[-1]
+
+b = drag_cannon(flight_state(0, 0, 900*cos(pi*35/180), 900*sin(pi*35/180), 0), _dt = 0.1)
+b.shoot()
+b.show_trajectory()
+plot(x,y,'b--', label = r'$drag\theta=35^\circ$')
+legend(loc = 'best', prop = {'size':11}, frameon = False)
+b_final = x[-1]
+
+a = cannon(flight_state(0, 0, 900*cos(pi*40/180), 900*sin(pi*40/180), 0), _dt = 0.1)
+a.shoot()
+a.show_trajectory()
+plot(x,y,'y',label=r'$\theta=40^\circ$')
+legend(loc='best',prop={'size':11},frameon=False)
+a_final=x[-1]
+
+b = drag_cannon(flight_state(0, 0, 900*cos(pi*40/180), 900*sin(pi*40/180), 0), _dt = 0.1)
+b.shoot()
+b.show_trajectory()
+plot(x,y,'y--', label = r'$drag\theta=40^\circ$')
+legend(loc = 'best', prop = {'size':11}, frameon = False)
+b_final = x[-1]
+
+a = cannon(flight_state(0, 0, 900*cos(pi*45/180), 900*sin(pi*45/180), 0), _dt = 0.1)
+a.shoot()
+a.show_trajectory()
+plot(x,y,'c',label=r'$\theta=45^\circ$')
+legend(loc='best',prop={'size':11},frameon=False)
+a_final=x[-1]
+
+b = drag_cannon(flight_state(0, 0, 900*cos(pi*45/180), 900*sin(pi*45/180), 0), _dt = 0.1)
+b.shoot()
+b.show_trajectory()
+plot(x,y,'c--', label = r'$drag\theta=45^\circ$')
+legend(loc = 'best', prop = {'size':11}, frameon = False)
+b_final = x[-1]
+
+a = cannon(flight_state(0, 0, 900*cos(pi*50/180), 900*sin(pi*50/180), 0), _dt = 0.1)
+a.shoot()
+a.show_trajectory()
+plot(x,y,'g',label=r'$\theta=50^\circ$')
+legend(loc='best',prop={'size':11},frameon=False)
+a_final=x[-1]
+
+b = drag_cannon(flight_state(0, 0, 900*cos(pi*50/180), 900*sin(pi*50/180), 0), _dt = 0.1)
+b.shoot()
+b.show_trajectory()
+plot(x,y,'g--', label = r'$drag\theta=50^\circ$')
+legend(loc = 'best', prop = {'size':11}, frameon = False)
+b_final = x[-1]
+
+a = cannon(flight_state(0, 0, 900*cos(pi*60/180), 900*sin(pi*60/180), 0), _dt = 0.1)
+a.shoot()
+a.show_trajectory()
+plot(x,y,color='m',label=r'$\theta=60^\circ$')
+legend(loc='best',prop={'size':11},frameon=False)
+a_final=x[-1]
+
+b = drag_cannon(flight_state(0, 0, 900*cos(pi*60/180), 900*sin(pi*60/180), 0), _dt = 0.1)
+b.shoot()
+b.show_trajectory()
+plot(x,y,'m--', label = r'$drag\theta=60^\circ$')
+legend(loc = 'best', prop = {'size':11}, frameon = False)
+b_final = x[-1]
+
+title('trajectory of cannon shell')
+xlabel('x(km)')
+ylabel('y(km)')
+show()
 ```
 无阻力情况效果图：
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/05-2.pgn)
@@ -146,13 +294,223 @@ show()
 
 故微分方程的修改项变为：
 
-绝热模型代码绝热模型效果图 ：
+绝热模型代码:
+```python
+g = 9.8
+b2m = 1e-5
+
+class flight_state:
+    def __init__(self, _x = 0, _y = 0, _vx = 0, _vy = 0, _t = 0):
+        self.x = _x
+        self.y = _y
+        self.vx = _vx
+        self.vy = _vy
+        self.t = _t
+
+class cannon:
+    def __init__(self, _fs = flight_state(0, 0, 0, 0, 0), _dt = 0.1):
+        self.cannon_flight_state = []
+        self.cannon_flight_state.append(_fs)
+        self.dt = _dt
+        #print self.cannon_flight_state[-1].x, self.cannon_flight_state[-1].y, self.cannon_flight_state[-1].vx, self.cannon_flight_state[-1].vy
+
+    def next_state(self, current_state):
+        global g
+        next_x = current_state.x + current_state.vx * self.dt
+        next_vx = current_state.vx
+        next_y = current_state.y + current_state.vy * self.dt
+        next_vy = current_state.vy - g * self.dt
+        next_t = current_state.t + self.dt
+        #print next_x, next_y
+        return flight_state(next_x, next_y, next_vx, next_vy, next_t)
+
+    def shoot(self):
+        while not(self.cannon_flight_state[-1].y < 0):
+            self.cannon_flight_state.append(self.next_state(self.cannon_flight_state[-1]))
+        r = - self.cannon_flight_state[-2].y / self.cannon_flight_state[-1].y
+        self.cannon_flight_state[-1].x = (self.cannon_flight_state[-2].x + r * self.cannon_flight_state[-1].x) / (r + 1)
+        self.cannon_flight_state[-1].y = 0
+        #print self.cannon_flight_state[-1].x, self.cannon_flight_state[-1].y, self.cannon_flight_state[-1].vx, self.cannon_flight_state[-1].vy
+
+
+    def show_trajectory(self):
+        global x,y        
+        x = []
+        y = []
+        for fs in self.cannon_flight_state:
+            x.append(fs.x)
+            y.append(fs.y)
+
+class drag_cannon(cannon):
+    def next_state(self, current_state):
+        global g, b2m
+        v = sqrt(current_state.vx * current_state.vx + current_state.vy * current_state.vy)
+        next_x = current_state.x + current_state.vx * self.dt
+        next_vx = current_state.vx - b2m * v * current_state.vx * self.dt
+        next_y = current_state.y + current_state.vy * self.dt
+        next_vy = current_state.vy - g * self.dt - b2m * v * current_state.vy * self.dt
+        #print next_x, next_y
+        return flight_state(next_x, next_y, next_vx, next_vy, current_state.t + self.dt)
+
+
+class adiabatic_drag_cannon(cannon):
+    def next_state(self, current_state):
+        global g, b2m
+        factor = (1 - 6.5e-3 * current_state.y / 288.15) ** 2.5
+        v = sqrt(current_state.vx * current_state.vx + current_state.vy * current_state.vy)
+        next_x = current_state.x + current_state.vx * self.dt
+        next_vx = current_state.vx - b2m * v * current_state.vx * self.dt * factor
+        next_y = current_state.y + current_state.vy * self.dt
+        next_vy = current_state.vy - g * self.dt - b2m * v * current_state.vy * self.dt
+        #print next_x, next_y
+        return flight_state(next_x, next_y, next_vx, next_vy, current_state.t + self.dt)
+
+b = drag_cannon(flight_state(0, 0, 700*cos(pi*45/180), 700*sin(pi*45/180), 0), _dt = 0.1)
+b.shoot()
+b.show_trajectory()
+plot(x,y,'c', label = 'with drag')
+legend(loc = 'best', prop = {'size':11}, frameon = False)
+b_final = x[-1]
+
+a = cannon(flight_state(0, 0, 700*cos(pi*45/180), 700*sin(pi*45/180), 0), _dt = 0.1)
+a.shoot()
+a.show_trajectory()
+plot(x,y,'m',label='no drag')
+legend(loc='best',prop={'size':11},frameon=False)
+a_final=x[-1]
+
+
+d = adiabatic_drag_cannon(flight_state(0, 0, 700*cos(pi*45/180), 700*sin(pi*45/180), 0), _dt = 0.1)
+d.shoot()
+d.show_trajectory()
+plot(x,y,'y',label='adiabatic approximation')
+legend(loc='best',prop={'size':11},frameon=False)
+d_final=x[-1]
+
+text(10000,16000,r'$\theta=45^\circ$')
+title('trajectory of cannon shell with different drag')
+xlabel('x(km)')
+ylabel('y(km)')
+xlim(0,60000)
+ylim(0,18000)
+show()
+
+```
+绝热模型效果图 ：
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/03_1.gif)
 
 * 4、绝热情况下的最大发射角： 
 绝热模型最大发射角代码：
 ```python
+g = 9.8
+b2m = 1e-5
 
+class flight_state:
+    def __init__(self, _x = 0, _y = 0, _vx = 0, _vy = 0, _t = 0):
+        self.x = _x
+        self.y = _y
+        self.vx = _vx
+        self.vy = _vy
+        self.t = _t
+
+class cannon:
+    def __init__(self, _fs = flight_state(0, 0, 0, 0, 0), _dt = 0.1):
+        self.cannon_flight_state = []
+        self.cannon_flight_state.append(_fs)
+        self.dt = _dt
+        #print self.cannon_flight_state[-1].x, self.cannon_flight_state[-1].y, self.cannon_flight_state[-1].vx, self.cannon_flight_state[-1].vy
+
+    def next_state(self, current_state):
+        global g
+        next_x = current_state.x + current_state.vx * self.dt
+        next_vx = current_state.vx
+        next_y = current_state.y + current_state.vy * self.dt
+        next_vy = current_state.vy - g * self.dt
+        next_t = current_state.t + self.dt
+        #print next_x, next_y
+        return flight_state(next_x, next_y, next_vx, next_vy, next_t)
+
+    def shoot(self):
+        while not(self.cannon_flight_state[-1].y < 0):
+            self.cannon_flight_state.append(self.next_state(self.cannon_flight_state[-1]))
+        r = - self.cannon_flight_state[-2].y / self.cannon_flight_state[-1].y
+        self.cannon_flight_state[-1].x = (self.cannon_flight_state[-2].x + r * self.cannon_flight_state[-1].x) / (r + 1)
+        self.cannon_flight_state[-1].y = 0
+        #print self.cannon_flight_state[-1].x, self.cannon_flight_state[-1].y, self.cannon_flight_state[-1].vx, self.cannon_flight_state[-1].vy
+
+
+    def show_trajectory(self):
+        global x,y        
+        x = []
+        y = []
+        for fs in self.cannon_flight_state:
+            x.append(fs.x)
+            y.append(fs.y)
+
+
+class adiabatic_drag_cannon(cannon):
+    def next_state(self, current_state):
+        global g, b2m
+        factor = (1 - 6.5e-3 * current_state.y / 288.15) ** 2.5
+        v = sqrt(current_state.vx * current_state.vx + current_state.vy * current_state.vy)
+        next_x = current_state.x + current_state.vx * self.dt
+        next_vx = current_state.vx - b2m * v * current_state.vx * self.dt * factor
+        next_y = current_state.y + current_state.vy * self.dt
+        next_vy = current_state.vy - g * self.dt - b2m * v * current_state.vy * self.dt
+        #print next_x, next_y
+        return flight_state(next_x, next_y, next_vx, next_vy, current_state.t + self.dt)
+
+d = adiabatic_drag_cannon(flight_state(0, 0, 700*cos(pi*35/180), 700*sin(pi*35/180), 0), _dt = 0.1)
+d.shoot()
+d.show_trajectory()
+plot(x,y,'y',label=r'$\theta=35^\circ$')
+legend(loc='best',prop={'size':11},frameon=False)
+d_final=x[-1]
+
+d = adiabatic_drag_cannon(flight_state(0, 0, 700*cos(pi*40/180), 700*sin(pi*40/180), 0), _dt = 0.1)
+d.shoot()
+d.show_trajectory()
+plot(x,y,'c',label=r'$\theta=40^\circ$')
+legend(loc='best',prop={'size':11},frameon=False)
+d_final=x[-1]
+
+d = adiabatic_drag_cannon(flight_state(0, 0, 700*cos(pi*42.5/180), 700*sin(pi*42.5/180), 0), _dt = 0.1)
+d.shoot()
+d.show_trajectory()
+plot(x,y,'r--',label=r'$\theta=42.5^\circ$')
+legend(loc='best',prop={'size':11},frameon=False)
+d_final=x[-1]
+
+d = adiabatic_drag_cannon(flight_state(0, 0, 700*cos(pi*45/180), 700*sin(pi*45/180), 0), _dt = 0.1)
+d.shoot()
+d.show_trajectory()
+plot(x,y,'r',label=r'$\theta=45^\circ$')
+legend(loc='best',prop={'size':11},frameon=False)
+d_final=x[-1]
+
+d = adiabatic_drag_cannon(flight_state(0, 0, 700*cos(pi*50/180), 700*sin(pi*50/180), 0), _dt = 0.1)
+d.shoot()
+d.show_trajectory()
+plot(x,y,'m',label=r'$\theta=50^\circ$')
+legend(loc='best',prop={'size':11},frameon=False)
+d_final=x[-1]
+
+
+
+d = adiabatic_drag_cannon(flight_state(0, 0, 700*cos(pi*55/180), 700*sin(pi*55/180), 0), _dt = 0.1)
+d.shoot()
+d.show_trajectory()
+plot(x,y,'g',label=r'$\theta=55^\circ$')
+legend(loc='best',prop={'size':11},frameon=False)
+d_final=x[-1]
+
+
+title('trajectory of cannon shell with adiabatic_drag')
+xlabel('x(km)')
+ylabel('y(km)')
+xlim(0,60000)
+ylim(0,18000)
+show()
 ```
 绝热模型最大发射角效果图：
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/03_1.gif)
