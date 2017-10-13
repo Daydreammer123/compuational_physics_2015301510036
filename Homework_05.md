@@ -131,8 +131,10 @@ show()
 
 * 2、当考虑空气阻力时:\
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/521.png)
+
 化为微分表达式:\
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/522.png)
+
 有阻力情况代码:
 ```python
 g = 9.8
@@ -292,8 +294,10 @@ show()
 * 3、考虑绝热模型:\
 空气密度随高度变化的关系为:\
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/531.png)
+
 故微分方程的修改项变为:\
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/532.png)
+
 绝热模型代码:
 ```python
 g = 9.8
@@ -399,7 +403,8 @@ show()
 绝热模型效果图 ：\
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/5-3.png)
 
-* 4、绝热情况下的最大发射角：\ 
+* 4、绝热情况下的最大发射角:\
+
 绝热模型最大发射角代码：
 ```python
 g = 9.8
@@ -518,8 +523,9 @@ show()
 可以看出：最大发射角可能不再是45度，随参数的变化而变化。
 
 ### 四、总结
-
-见上面的情况分析
+1、不考虑空气阻力时，45度角是无阻力情况的最大发射角；而且相加为90度的射程相同。
+2、考虑空气阻力时，仍然是45度为最大发射角，但是“相加为90的射程相同”不成立。
+3、绝热模型下，最大发射角可能不再是45度，随参数的变化而变化。
 
 ### 五、致谢
     感谢王智麟同学~
