@@ -15,9 +15,45 @@
 ![](http://latex.codecogs.com/gif.latex?\frac{S_{0}}{m}{=}0.00041)\
 ![](http://latex.codecogs.com/gif.latex?\frac{B_{2}}{m}{=}0.0039+\frac{0.0058}{1+z})\
 ![](http://latex.codecogs.com/gif.latex?z{=}1+e^{\frac{v-vd}{\bigtriangleup}})\
-![](http://latex.codecogs.com/gif.latex?v_{d}{=}35m/s),![](http://latex.codecogs.com/gif.latex?\bigtriangleup{=}5m/s)\
+![](http://latex.codecogs.com/gif.latex?v_{d}{=}35m/s),![](http://latex.codecogs.com/gif.latex?\bigtriangleup{=}5m/s)
+
+②定义一个新的类——ball，其属性是球的运动状态，包括位置、速度、角速度，计算下一刻的状态，只需不断使用该方法，并记录下每次的状态，即可得到轨迹.
+
+```python
+class ball:
+    def __init__(self,v,theta):
+        self.x=0.0
+        self.y=1.5
+        self.vx=v*math.cos(math.pi*theta/180)
+        self.vy=v*math.sin(math.pi*theta/180)
+        self.w=2000*2*math.pi/60       
+    def fly(self):
+        self.x=self.x+self.vx*dt
+        self.y=self.y+self.vy*dt
+        self.vx=self.vx+(-B2m(abs(self.vx-vwind))*(self.vx-vwind)*math.sqrt((self.vx-vwind)*(self.vx-vwind)+self.vy+self.vy)-S0m*self.vy*self.w)*dt
+        self.vy=self.vy+(-B2m(abs(self.vy))*self.vy*math.sqrt((self.vx-vwind)*(self.vx-vwind)+self.vy+self.vy)+S0m*(self.vx-vwind)*self.w-g)*dt
+```
+③接下来的语句就是循环执行fly方法，记录下每次的位置，即可用plot作图.
+
+```python
+S0m=4.1e-4 #backspin
+vwind=4.4704 #10mph,tailwind
+a=ball(50,35)
+x1=[]
+y1=[]
+x1.append(a.x)
+y1.append(a.y)
+while a.y>0:
+    a.fly()
+    x1.append(a.x)
+    y1.append(a.y)
+x1[-1]=(x1[-2]-y1[-2]*x1[-1]/y1[-1])/(1-y1[-2]/y1[-1])
+y1[-1]=0
+```
+
 
 ### 三、正文
+- 实验代码
 
 ```python
 import math
@@ -119,7 +155,7 @@ print ('distance with headwind and nospin=',x4[-1])
 
 
 ### 四、总结
-   
+   分析图片了可以看出：不考虑自旋，顺风比逆风更高更远。考虑自旋时，逆风条件下下旋球会比无自旋是更高更远
     
 ### 五、致谢
-   
+   谢谢王智麟的指导~
