@@ -5,7 +5,20 @@
    关键词：棒球运动，顺风逆风，角速度，自旋
 
 ### 二、背景介绍
-- 思路
+- 思路:\
+①先考虑下旋球，不考虑左右两个方向，故建立二维xy坐标系。\
+![](http://latex.codecogs.com/gif.latex?d_{x}{=}v_{x}dt)\
+![](http://latex.codecogs.com/gif.latex?d_{y}{=}v_{y}dt)\
+![](http://latex.codecogs.com/gif.latex?dv_{x}{=}\left(\frac{-B_{2}vv_{x}}{m}-\frac{S_{0}v_{x}w}{m}\right)dt)\
+![](http://latex.codecogs.com/gif.latex?dv_{y}{=}\left(\frac{-B_{2}vv_{y}}{m}+\frac{S_{0}v_{y}w}{m}\right)dt-gdt)\
+其中\
+![](http://latex.codecogs.com/gif.latex?\frac{S_{0}}{m}{=}0.00041)\
+
+![](http://latex.codecogs.com/gif.latex?\frac{B_{2}}{m}{=}0.0039+\frac{0.0058}{1+z})\
+
+![](http://latex.codecogs.com/gif.latex?z{=}1+e^{\frac{v-vd}{\bigtriangleup}})\
+
+![](http://latex.codecogs.com/gif.latex?v_{d}{=}35m/s),![](http://latex.codecogs.com/gif.latex?\bigtriangleup{=}5m/s)\
 
 ### 三、正文
 
