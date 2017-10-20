@@ -16,11 +16,11 @@
 - [x] [Exercise_02](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/Homework_02.md):屏幕打名字.\
 或者[上一个无法运行戳这里](https://www.zybuluo.com/lilyechoC/note/885356)
 - [x] [Exercise_03](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/Homework_03.md):在屏幕上，让你的名字.gif起来.
-- [x] [Exercise_04](https://https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/Homework_04.md): 第一章课后习题.\
+- [x] [Exercise_04](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/Homework_04.md): 第一章课后习题.\
 非常抱歉 上个星期忘记更新readme里的链接，但确实上周就已完成并放在在软件池中，麻烦老师再看一下，万分感谢！
-- [x] [Exercise_05](https://https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/Homework_05.md): p31页课后大炮习题。\
+- [x] [Exercise_05](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/Homework_05.md): p31页课后大炮习题。\
 刚刚又忘记更新readme了，老师对不起TAT
-* [Exercise_06](https://?): Chapter 2 problem 2.9题,problem 2.10题强化版,发展“超级辅助精确打击系统”.
+- [x] [Exercise_06](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/Homework_06.md): 2-19题
 * [Exercise_07](https://?): Chapter 2 problem 2.19,使用vpython可视化炮弹发射或者棒球运动.
 * [Exercise_08](https://?): Chapter 3 problem 3.7,problem 3.8.
 * [Exercise_09](https://?): Chapter 3 problem 3.12,problem 3.16,problem 3.21.
