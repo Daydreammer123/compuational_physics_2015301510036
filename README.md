@@ -21,7 +21,7 @@
 - [x] [Exercise_05](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/Homework_05.md): p31页课后大炮习题。\
 刚刚又忘记更新readme了，老师对不起TAT
 - [x] [Exercise_06](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/Homework_06.md): p43页2-19题
-* [Exercise_07](https://?): Chapter 2 problem 2.19,使用vpython可视化炮弹发射或者棒球运动.
+- [x] [Exercise_07](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/Homework_07.md): p65页3.12题 混沌摆.
 * [Exercise_08](https://?): Chapter 3 problem 3.7,problem 3.8.
 * [Exercise_09](https://?): Chapter 3 problem 3.12,problem 3.16,problem 3.21.
 * [Exercise_10](https://?): Chapter 3 problem 3.26,problem 3.29,problem 3.31,将以上题目使用vpython进行一个3D展示.
