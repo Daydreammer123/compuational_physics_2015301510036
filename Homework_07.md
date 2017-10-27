@@ -13,7 +13,7 @@
 考虑驱动力和耗散力的摆的微分方程：\
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/7-1.png)\
 其中：g=9.8m/s l=9.8m ![](http://latex.codecogs.com/gif.latex?q=0.5s^{-1})\
-q是耗散参数，![](http://latex.codecogs.com/gif.latex?F_{D})和![](http://latex.codecogs.com/gif.latex?\Omega _{D})分别是驱动力的幅度和角频率。
+q是耗散参数，![](http://latex.codecogs.com/gif.latex?F_{D})和![](http://latex.codecogs.com/gif.latex?\Omega_{D})分别是驱动力的幅度和角频率。
 
     混乱，意味着你改变了初始条件，终点的差异就失之千里。但这并不意味着它是不可预知的，相反，由于我们有ODE和初始条件，我们可以预测摆锤的轨迹。\
 Eular-Cromer方法执行如下：\
