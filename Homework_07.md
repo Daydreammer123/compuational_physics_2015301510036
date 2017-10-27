@@ -1,7 +1,7 @@
 ## 第七次作业
 
 ### 一、摘要
-   p65页3.12题：Construct the Poineare sections for these cases and compare them with Ficture 3.9.
+   p65页3.12题：Construct the Poineare sections for these cases and compare them with Ficture 3.9.\
    关键词：摆，混沌，相位空间，非线性，阻尼。
 
 ### 二、背景介绍
@@ -10,23 +10,23 @@
 
 ### 三、正文
 * 1、思路
-考虑驱动力和耗散力的摆的微分方程：
-![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/7-1.png)
-其中：g=9.8m/s l=9.8m ![](http://latex.codecogs.com/gif.latex?q=0.5s^{-1})
+考虑驱动力和耗散力的摆的微分方程：\
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/7-1.png)\
+其中：g=9.8m/s l=9.8m ![](http://latex.codecogs.com/gif.latex?q=0.5s^{-1})\
 q是耗散参数，![](http://latex.codecogs.com/gif.latex?F_{D})和![](http://latex.codecogs.com/gif.latex?\Omega _{D})分别是驱动力的幅度和角频率。
 
-混乱，意味着你改变了初始条件，终点的差异就失之千里。但这并不意味着它是不可预知的，相反，由于我们有ODE和初始条件，我们可以预测摆锤的轨迹。
-Eular-Cromer方法执行如下：
-![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/7-2.png)
-使![](http://latex.codecogs.com/gif.latex?\theta_{i+1})在![](http://latex.codecogs.com/gif.latex?\left[-\pi\right\pi])间取值
-取![](http://latex.codecogs.com/gif.latex?F_{D}{=}0,0.5,1.2)，计算，有图：
-![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/71.png)
-当![](http://latex.codecogs.com/gif.latex?F_{D}{=}0,0.5)时，没有混沌出现。
-如图
-![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/72.png)
-但是当![](http://latex.codecogs.com/gif.latex?F_{D}{=}1.2)时，我们发现混沌。
-如图
-![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/73.png)
+混乱，意味着你改变了初始条件，终点的差异就失之千里。但这并不意味着它是不可预知的，相反，由于我们有ODE和初始条件，我们可以预测摆锤的轨迹。\
+Eular-Cromer方法执行如下：\
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/7-2.png)\
+使![](http://latex.codecogs.com/gif.latex?\theta_{i+1})在![](http://latex.codecogs.com/gif.latex?\left[-\pi\right\pi])间取值\
+取![](http://latex.codecogs.com/gif.latex?F_{D}{=}0,0.5,1.2)，计算，有图：\
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/71.png)\
+当![](http://latex.codecogs.com/gif.latex?F_{D}{=}0,0.5)时，没有混沌出现。\
+如图\
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/72.png)\
+但是当![](http://latex.codecogs.com/gif.latex?F_{D}{=}1.2)时，我们发现混沌。\
+如图\
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/73.png)\
 当我们选择一些特殊的点：![](http://latex.codecogs.com/gif.latex?\Omega_{D}t_{i}{=}2\pin)，其中n为任意整数，我们看到如Figure3.9的图，看到attractor。
 
 * 2、代码
@@ -89,16 +89,7 @@ plt.title(r'$\omega$'+'   versus   '+r'$\theta$'+'   FD=1.2')
 plt.savefig('chaos4.png')
 plt.show()
 ```
-效果图：
 
-![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/02-1.png)
-
-* 2、进阶版
-```python
->>> a="qiaominchen"
->>> for i in range(len(a)):
-    print(a[i])
-```   
 效果图：
 
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/74.png)
