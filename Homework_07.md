@@ -15,7 +15,7 @@
 其中：g=9.8m/s l=9.8m ![](http://latex.codecogs.com/gif.latex?q=0.5s^{-1})\
 q是耗散参数，![](http://latex.codecogs.com/gif.latex?F_{D})和![](http://latex.codecogs.com/gif.latex?\Omega _{D})分别是驱动力的幅度和角频率。
 
-混乱，意味着你改变了初始条件，终点的差异就失之千里。但这并不意味着它是不可预知的，相反，由于我们有ODE和初始条件，我们可以预测摆锤的轨迹。\
+    混乱，意味着你改变了初始条件，终点的差异就失之千里。但这并不意味着它是不可预知的，相反，由于我们有ODE和初始条件，我们可以预测摆锤的轨迹。\
 Eular-Cromer方法执行如下：\
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/7-2.png)\
 使![](http://latex.codecogs.com/gif.latex?\theta_{i+1})在![](http://latex.codecogs.com/gif.latex?\left[-\pi\right\pi])间取值\
@@ -96,7 +96,7 @@ plt.show()
 
 
 ### 四、总结
-   混乱的制度似乎是无序的，但如果我们在驱动力的每一个周期内选择一个点，我们可以看到吸引力，而这个特征只出现在一些特殊的情况下。如果我改变驱动力的幅度，attractor消失。
+   混乱的制度似乎是无序的，但如果我们在驱动力的每一个周期内选择一个点，我们可以看到attractor，而这个特征只出现在一些特殊的情况下。如果我改变驱动力的幅度，attractor消失。
     
 ### 五、致谢
     感谢王泽。
