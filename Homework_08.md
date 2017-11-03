@@ -23,9 +23,9 @@
   ![](http://latex.codecogs.com/gif.latex?v_{z,i+1}{=}-y_{i}x_{i}-bz_{i})
 
 可知Lprenz模型内流体运动显著依赖于驱动r，当改变驱动r的大小时，可观察到混沌的产生和消失。\
-取![](http://latex.codecogs.com/gif.latex?\sigma=10,b=8/3),初始值x=1，y=z=0，在不同的r值时画出速度z随时间的变化曲线：
+- [ ] 取![](http://latex.codecogs.com/gif.latex?\sigma=10,b=8/3),初始值x=1，y=z=0，在不同的r值时画出速度z随时间的变化曲线：
 
-- [x] code①：
+code①：
 ```python
 import math
 import matplotlib.pyplot as plt
@@ -72,10 +72,10 @@ plt.show()
 
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/8-1.png)
 
-> 发现，在r值较小时，z出现阻尼衰减的现象，但当r值增大到一定值时出现了复杂的混沌现象.\
+- [ ] 发现，在r值较小时，z出现阻尼衰减的现象，但当r值增大到一定值时出现了复杂的混沌现象.\
 于是我们将r值继续增大到160及163.8，作出相空间的图形：
 
-- [x] code②：
+code②：
 ```python
 import matplotlib.pyplot as plt
 
@@ -127,9 +127,9 @@ plt.show()
 
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/8-2.png)
 
-> 取r=25,初始值x=1，y=z=0：
+- [ ] 取r=25,初始值x=1，y=z=0：
 
-- [x] code③：
+code③：
 ```python
 import math
 import matplotlib.pyplot as plt
@@ -181,9 +181,9 @@ plt.show()
 ```
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/8-3.png)
 
-> 还可以做出相空间的截面图： 
+- [ ] 还可以做出相空间的截面图： 
 
-- [x] code④：
+code④：
 ```python
 import matplotlib.pyplot as plt
 
