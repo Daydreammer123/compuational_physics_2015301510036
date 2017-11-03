@@ -23,7 +23,7 @@
   ![](http://latex.codecogs.com/gif.latex?v_{z,i+1}{=}-y_{i}x_{i}-bz_{i})
 
 可知Lprenz模型内流体运动显著依赖于驱动r，当改变驱动r的大小时，可观察到混沌的产生和消失。\
-> 取![](http://latex.codecogs.com/gif.latex?\sigma=10,b=8/3),初始值x=1，y=z=0，在不同的r值时画出速度z随时间的变化曲线：
+取![](http://latex.codecogs.com/gif.latex?\sigma=10,b=8/3),初始值x=1，y=z=0，在不同的r值时画出速度z随时间的变化曲线：
 
 - [x] code①：
 ```python
