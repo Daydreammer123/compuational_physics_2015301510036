@@ -71,7 +71,7 @@ plt.show()
 
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/8-1.png)
 
-发现，在r值较小时，z出现阻尼衰减的现象，但当r值增大到一定值时出现了复杂的混沌现象。 
+发现，在r值较小时，z出现阻尼衰减的现象，但当r值增大到一定值时出现了复杂的混沌现象。\ 
 于是我们将r值继续增大到160及163.8，作出相空间的图形：
 
 - [x] code②：
