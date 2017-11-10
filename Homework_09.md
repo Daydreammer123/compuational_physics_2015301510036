@@ -229,7 +229,7 @@ class tabel:
             bound2 = ax.plot([], [], 'k.', markersize=1)
             return line1, point1, bound1, bound2
 
-        def anmi(i): 
+        def anmi(i):  # anmi函数用于每一帧的数据更新，i是帧数。
             ax.clear()
             bound1 = ax.plot(self.xbound, self.y1bound, 'k.', markersize=1)
             bound2 = ax.plot(self.xbound, self.y2bound, 'k.', markersize=1)
