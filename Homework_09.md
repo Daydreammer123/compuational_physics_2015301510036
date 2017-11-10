@@ -1,7 +1,7 @@
 ## 第九次作业
 
 ### 一、摘要
-   p88页3.30题：Investigate the Lyapunov exponent of the stadium billiard for several values of ![](http://latex.codecogs.com/gif.latex?q=0.5s^{-1}).\
+   p88页3.30题：Investigate the Lyapunov exponent of the stadium billiard for several values of α.\
    关键词：哈密顿，混沌，庞加莱截面。
 
 ### 二、背景介绍
@@ -11,22 +11,24 @@
 ### 三、正文
 * 1、思路
 ① 台球动力系统示意图：
-![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/7-1.png)
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/911.jpg)
 
 ② 一个混沌台球动力系统中粒子的轨迹：
-![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/7-1.png)
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/912.jpg)
 
 ③ 在完美的台球桌上，我们考虑一个没有摩擦的球移动的问题，碰撞速度是恒定的，所以我们有
-![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/7-1.png)
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/913.png)
 确定一个碰撞点，我们得到在碰撞点处垂直于墙的单位向量
-![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/7-1.png)
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/914.png)
 我们对速度进行分解可得
-![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/7-1.png)
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/916.png)
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/917.png)
 当粒子撞击边界时有
-![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/7-1.png)
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/918.png)
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/919.png)
 
 
-![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/7-1.png)
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/917.png)
 ![](http://latex.codecogs.com/gif.latex?q=0.5s^{-1})\
 
 * 2、代码：
@@ -102,11 +104,11 @@ a.show()
 pl.show()
 ```
 ①T = 50，单位圆下反弹
-![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/74.png)
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/921.png)
 ②T = 100，单位圆下反弹
-![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/74.png)
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/922.png)
 ③相空间情节
-![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/74.png)
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/923.png)
 
 3.考虑到在两半圆间增加宽为2α的矩形，并得到动画，代码如下
 ```python
@@ -248,9 +250,9 @@ a.show
 a.drawtrajectory()
 ```
 ①α= 0.1
-![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/74.png)
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/931.png)
 ②动图：
-![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/74.png)
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/932.gif)
 
 4.用欧拉法进行数值模拟
 ```python
@@ -396,11 +398,26 @@ for i in range(len(t1.x)):
 ```
 
 如图：
-![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/74.png)
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/971.png)
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/941.png)
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/942.png)
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/943.png)
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/944.png)
+
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/972.png)
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/951.png)
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/952.png)
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/953.png)
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/954.png)
+
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/973.png)
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/961.png)
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/962.png)
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/963.png)
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/964.png)
 
 ### 四、总结
 1.可以看出α不同时，李雅普诺夫指数截然不同；相同α下，不同的初始距离d可能导致李雅普诺夫指数的些微不同
-
 2.α越小曲线越密集，这说明系统经历了更多状态，可以预见，当α足够大即台球桌足够长时混沌现象可能会消失
     
 ### 五、致谢
