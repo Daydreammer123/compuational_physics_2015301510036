@@ -9,29 +9,25 @@
 - 台球动力系统拥有哈密顿系统从可积性到混沌运动的所有复杂性，无须对运动方程进行困难的积分就可确定其庞加莱截面。乔治·大卫·比尔霍夫证明一个椭圆边界的台球动力系统是可积的。
 
 ### 三、正文
-* 1、思路
+* 1、思路：\
 ① 台球动力系统示意图：
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/911.jpg)
 
-② 一个混沌台球动力系统中粒子的轨迹：
+② 一个混沌台球动力系统中粒子的轨迹：\
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/912.jpg)
 
-③ 在完美的台球桌上，我们考虑一个没有摩擦的球移动的问题，碰撞速度是恒定的，所以我们有
-![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/913.png)
-确定一个碰撞点，我们得到在碰撞点处垂直于墙的单位向量
-![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/914.png)
-我们对速度进行分解可得
-![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/916.png)
-![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/917.png)
-当粒子撞击边界时有
-![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/918.png)
-![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/919.png)
+③ 在完美的台球桌上，我们考虑一个没有摩擦的球移动的问题，碰撞速度是恒定的，所以我们有\
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/913.png)\
+确定一个碰撞点，我们得到在碰撞点处垂直于墙的单位向量\
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/914.png)\
+我们对速度进行分解可得\
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/916.png)\
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/917.png)\
+当粒子撞击边界时有\
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/918.png)\
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/919.png)\
 
-
-![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/917.png)
-![](http://latex.codecogs.com/gif.latex?q=0.5s^{-1})\
-
-* 2、代码：
+* 2、代码:
 ```python
 import pylab as pl
 import numpy as np
@@ -103,14 +99,14 @@ a.bound()
 a.show()
 pl.show()
 ```
-①T = 50，单位圆下反弹
-![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/921.png)
-②T = 100，单位圆下反弹
-![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/922.png)
-③相空间情节
-![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/923.png)
+①T = 50，单位圆下反弹\
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/921.png)\
+②T = 100，单位圆下反弹\
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/922.png)\
+③相空间情节\
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/mast\er/pictures/923.png)
 
-3.考虑到在两半圆间增加宽为2α的矩形，并得到动画，代码如下
+3.考虑到在两半圆间增加宽为2α的矩形，并得到动画，代码如下:\
 ```python
 import pylab as pl
 import numpy as np
@@ -249,12 +245,12 @@ a.bound()
 a.show
 a.drawtrajectory()
 ```
-①α= 0.1
-![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/931.png)
-②动图：
+①α= 0.1\
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/931.png)\
+②动图：\
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/932.gif)
 
-4.用欧拉法进行数值模拟
+4.用欧拉法进行数值模拟\
 ```python
 import math
 
@@ -397,20 +393,20 @@ for i in range(len(t1.x)):
     d_log.append(math.log(d[i]))
 ```
 
-如图：
-![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/971.png)
+如图：\
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/971.gif)\
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/941.png)
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/942.png)
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/943.png)
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/944.png)
 
-![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/972.png)
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/972.gif)\
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/951.png)
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/952.png)
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/953.png)
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/954.png)
 
-![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/973.png)
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/973.gif)\
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/961.png)
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/962.png)
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/963.png)
