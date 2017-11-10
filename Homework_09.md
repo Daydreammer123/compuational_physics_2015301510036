@@ -104,7 +104,7 @@ pl.show()
 ②T = 100，单位圆下反弹\
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/922.png)\
 ③相空间情节\
-![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/mast\er/pictures/923.png)
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/923.png)
 
 3.考虑到在两半圆间增加宽为2α的矩形，并得到动画，代码如下:\
 ```python
