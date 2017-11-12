@@ -149,8 +149,8 @@ while True:
     print_text(font1, 500, 0, "SCORE: " + str(score))
     pygame.display.update()
 ```
-文件打包：[猫吃鱼压缩包](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/files/cat%26fish.rar)
-效果：
+* 3、文件打包：[猫吃鱼压缩包](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/files/cat%26fish.rar)\
+* 4、效果：
 
 ### 四、炮弹游戏
 
