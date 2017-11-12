@@ -12,7 +12,7 @@
 * 1、思路\
 呃，这是一个没那么正经的模仿教程的小游戏。\
 最常见的小时候的射程游戏就是飞机打目标了吧，于是找了一个类似的教程，写了一个不是从下往上发炮弹而是从上往下掉鱼的小游戏。\
-游戏有五轮，游戏者有10条lives，接一条鱼score加100分，碰到一个炸弹减50分，丢一条鱼少一条命，每100积分升级一个round。\
+游戏有五轮，游戏者有10条lives，接一条鱼score加10分，每100积分升级一个round，丢一条鱼或者碰到一个炸弹都少一条命，命归0游戏结束。\
 第一、第二轮只有鱼，第三轮开始有炸弹，并且鱼的下降速度随round增加变快，即游戏难度越来越大。\
 每局lives剩下不多时猫会改变图片做出提示。没命了就会回到初始界面。还是挺简单的。
 
@@ -149,8 +149,8 @@ while True:
     print_text(font1, 500, 0, "SCORE: " + str(score))
     pygame.display.update()
 ```
-* 3、文件打包：[猫吃鱼压缩包](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/files/cat%26fish.rar)\
-* 4、效果：
+* 3、文件打包：【[压缩包](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/files/cat%26fish.rar)】
+* 4、效果：![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/files/%E7%8C%AB%E5%90%83%E9%B1%BC%E6%95%88%E6%9E%9C.gif)
 
 ### 四、炮弹游戏
 
