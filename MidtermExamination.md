@@ -153,9 +153,9 @@ while True:
 * 4、效果：![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/files/%E7%8C%AB%E5%90%83%E9%B1%BC%E6%95%88%E6%9E%9C.gif)
 
 ### 四、炮弹游戏
-update~
-先来个【[压缩包](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/files/Shooting%EF%BC%81.rar)】链接
-玩了很久还是不知道炮弹咋弄，就搞了个射击进击版~炮弹我再试试
+update~\
+先来个【[压缩包](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/files/Shooting%EF%BC%81.rar)】链接\
+玩了很久还是不知道炮弹咋弄，就搞了个射击进击版~炮弹我再试试\
 文字解说稍后补上
 
 ### 五、总结
