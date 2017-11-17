@@ -480,9 +480,9 @@ while not done:
 pygame.quit()
 ```
 
-* 3、文件打包：【[压缩包](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/files/cat%26fish.rar)】
+* 3、文件打包：【[压缩包](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/files/Shooting%EF%BC%81.rar)】
 
-* 4、效果：![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/files/%E7%8C%AB%E5%90%83%E9%B1%BC%E6%95%88%E6%9E%9C.gif)
+* 4、效果：![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/files/shooting%E6%95%88%E6%9E%9C.GIF)
 
 
 ### 五、总结
