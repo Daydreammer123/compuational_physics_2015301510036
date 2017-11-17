@@ -420,7 +420,8 @@ while not done:
 			screen.blit(monster[enemy], monster_spot[i])
 
 if monster_spot[i][1] > (size[1] - dim[1]) or monster_spot[i][1]<= 0:
-				offset[i][1] = -offset[i][1]
+
+offset[i][1] = -offset[i][1]
 			if monster_spot[i][0] > size[0] - dim[0] or monster_spot[i][0] <= 0:
 				offset[i][0] = -offset[i][0]
 			monster_spot[i][1] += offset[i][1]
@@ -482,8 +483,8 @@ pygame.quit()
 
 * 3、文件打包：【[压缩包](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/files/Shooting%EF%BC%81.rar)】
 
-* 4、效果：\ ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/files/shooting%E6%95%88%E6%9E%9C.GIF)
-
+* 4、效果:\
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/files/shooting%E6%95%88%E6%9E%9C.GIF)
 
 ### 五、总结
     好像还是挺好玩的，表现形式比单纯用Python做题丰富
