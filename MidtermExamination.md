@@ -155,7 +155,6 @@ while True:
 ### 四、炮弹游戏
 * 1、update~\
 玩了很久还是不知道炮弹咋弄，就搞了个射击进击版~炮弹我再试试\
-
 进阶版加了音乐和音效，改变了视角，有点难玩，，所以命增加到了25条哈哈（因为我自己写的自己也玩不通关……要求熟练度还是有点高hh）\
 和前面一样一共25条命，空枪一次少一条，打中一个加10分，\
 每个level有三波，每波目标1个2个4个，速度递增。
@@ -419,7 +418,8 @@ while not done:
 		
 		for i in range(monsters):
 			screen.blit(monster[enemy], monster_spot[i])
-			if monster_spot[i][1] > (size[1] - dim[1]) or monster_spot[i][1]<= 0:
+
+if monster_spot[i][1] > (size[1] - dim[1]) or monster_spot[i][1]<= 0:
 				offset[i][1] = -offset[i][1]
 			if monster_spot[i][0] > size[0] - dim[0] or monster_spot[i][0] <= 0:
 				offset[i][0] = -offset[i][0]
@@ -482,7 +482,7 @@ pygame.quit()
 
 * 3、文件打包：【[压缩包](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/files/Shooting%EF%BC%81.rar)】
 
-* 4、效果：![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/files/shooting%E6%95%88%E6%9E%9C.GIF)
+* 4、效果：\ ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/files/shooting%E6%95%88%E6%9E%9C.GIF)
 
 
 ### 五、总结
