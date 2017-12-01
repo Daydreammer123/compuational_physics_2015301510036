@@ -24,7 +24,8 @@
 - [x] [Exercise_07](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/Homework_07.md): p65页3.12题 混沌摆.
 - [x] [Exercise_08](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/Homework_08.md): p82页3.26题
 - [x] [Exercise_09](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/Homework_09.md):p88页3.30题
-- [x] [MidtermExamination](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/MidtermExamination.md): Pygame小游戏：猫吃鱼+ 打枪游戏，ps所有的作业一直都是用Python3.6版本写的……希望老师能换3.6版本运行试一下~
+- [x] [MidtermExamination](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/MidtermExamination.md): Pygame小游戏：猫吃鱼+ 打枪游戏，\
+ps所有的作业一直都是用Python3.6版本写的……希望老师能换3.6版本运行试一下~
 - [x] [Exercise_10](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/Homework_10.md): p188页4.16题.
 * [Exercise_11](https://?): Chapter 4 problem 4.7,problem 4.9,problem 4.11.
 * [Exercise_12](https://?): Chapter 4 problem 4.18: The Kirkwood Gap.
