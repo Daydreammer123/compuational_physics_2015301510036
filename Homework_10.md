@@ -1,7 +1,7 @@
 ## 第十次作业
 
 ### 一、摘要
-  p118页4.16题：利用欧拉克罗默的方法，研究三体问题。
+  p118页4.16题：利用欧拉克罗默的方法，研究三体问题。\
   关键词：三体问题，木星。
 
 ### 二、背景介绍
@@ -10,9 +10,9 @@
 
 ### 三、正文
 * 1、思路：
-> 已知太阳质量为：![](http://latex.codecogs.com/gif.latex? M_{S}=2.0\times10^{30}kg) \
-地球质量为：![](http://latex.codecogs.com/gif.latex? M_{E}=6.0\times10^{24}kg) \ 
-木星质量为：![](http://latex.codecogs.com/gif.latex? M_{J}=1.9\times10^{27}kg) \ 
+> 已知太阳质量为：![](http://latex.codecogs.com/gif.latex?M_{S}=2.0\times10^{30}kg)\
+地球质量为：![](http://latex.codecogs.com/gif.latex?M_{E}=6.0\times10^{24}kg)\ 
+木星质量为：![](http://latex.codecogs.com/gif.latex?M_{J}=1.9\times10^{27}kg)\ 
 由受力公式可知，每个天体的总受力为每个其他天体对它的力的矢量和，为：，这里只计算太阳，地球和木星。 
 接下来讨论各种情形： 
 ```python
