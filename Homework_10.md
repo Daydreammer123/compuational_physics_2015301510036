@@ -13,10 +13,10 @@
 > 已知太阳质量为：![](http://latex.codecogs.com/gif.latex?M_{S}=2.0\times10^{30}kg) \
 地球质量为：![](http://latex.codecogs.com/gif.latex?M_{E}=6.0\times10^{24}kg) \
 木星质量为：![](http://latex.codecogs.com/gif.latex?M_{J}=1.9\times10^{27}kg) \
-由受力公式可知，每个天体的总受力为每个其他天体对它的力的矢量和，为：![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/101.png)，这里只计算太阳，地球和木星。 
+由受力公式可知，每个天体的总受力为每个其他天体对它的力的矢量和，为：![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/101.png)，\这里只计算太阳，地球和木星。 
 接下来讨论各种情形：
-* 1、在质心系下。太阳保持不动，木星与地球绕太阳做圆周运动，三者保持稳定运动状态。这是由于太阳的质量相对其余二者而言相当大，木星对地球的影响可以忽略
-①代码：\
+* 1、在质心系下。太阳保持不动，木星与地球绕太阳做圆周运动，三者保持稳定运动状态。这是由于太阳的质量相对其余二者而言相当大，木星对地球的影响可以忽略\
+①代码：
 ```python
 import numpy as np
 from pylab import *
