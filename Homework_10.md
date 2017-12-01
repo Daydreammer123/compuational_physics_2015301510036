@@ -10,10 +10,10 @@
 
 ### 三、正文
 * 1、思路：
-> 已知太阳质量为：![](http://latex.codecogs.com/gif.latex?M_{S}=2.0\times10^{30}kg)\
-地球质量为：![](http://latex.codecogs.com/gif.latex?M_{E}=6.0\times10^{24}kg)\ 
-木星质量为：![](http://latex.codecogs.com/gif.latex?M_{J}=1.9\times10^{27}kg)\ 
-由受力公式可知，每个天体的总受力为每个其他天体对它的力的矢量和，为：，这里只计算太阳，地球和木星。 
+> 已知太阳质量为：![](http://latex.codecogs.com/gif.latex?M_{S}=2.0\times10^{30}kg) \
+地球质量为：![](http://latex.codecogs.com/gif.latex?M_{E}=6.0\times10^{24}kg) \
+木星质量为：![](http://latex.codecogs.com/gif.latex?M_{J}=1.9\times10^{27}kg) \
+由受力公式可知，每个天体的总受力为每个其他天体对它的力的矢量和，为：![](http://latex.codecogs.com/gif.latex?\underset{F^{_{i}}}{\rightarrow}=\sum_{j}^{j\neqi}\frac{Gm_{i}m_{j}}{\left|\underset{r_{j}}{\rightarrow}-\underset{r_{i}}{\rightarrow}\right|^{2}}\cdot\frac{\underset{r_{j}}{\rightarrow}-\underset{r_{i}}{\rightarrow}}{{\left|\underset{r_{j}}{\rightarrow}-\underset{r_{i}}{\rightarrow}\right|}})\，这里只计算太阳，地球和木星。 
 接下来讨论各种情形： 
 ```python
 
