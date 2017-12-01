@@ -164,13 +164,13 @@ show()
 
 
 * 2、在质心系下。同样可以得出木星质量变大10倍，100倍，1000倍的截面图和三维图：\
-①木星质量变大10倍:
+①木星质量变大10倍:\
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/107.png)\
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/108.png)\
-②木星质量变大100倍:
+②木星质量变大100倍:\
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/109.png)\
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/1010.png)\
-③木星质量变大1000倍:
+③木星质量变大1000倍:\
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/1011.png)\
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/1012.png)\
 
