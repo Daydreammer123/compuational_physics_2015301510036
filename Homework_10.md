@@ -155,7 +155,6 @@ show()
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/102.png)\
 3D图：\
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/103.png)\
-
 ③改变初始条件有\
 截面图:\
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/104.png)\
