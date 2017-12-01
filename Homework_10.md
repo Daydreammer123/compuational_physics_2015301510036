@@ -16,7 +16,7 @@
 由受力公式可知，每个天体的总受力为每个其他天体对它的力的矢量和，为：![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/101.png)，这里只计算太阳，地球和木星。 
 接下来讨论各种情形：
 * 1、在质心系下。太阳保持不动，木星与地球绕太阳做圆周运动，三者保持稳定运动状态。这是由于太阳的质量相对其余二者而言相当大，木星对地球的影响可以忽略
-①代码：
+①代码：\
 ```python
 import numpy as np
 from pylab import *
@@ -156,14 +156,14 @@ show()
 3D图：\
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/103.png)\
 
-③改变初始条件有
+③改变初始条件有\
 截面图:\
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/104.png)\
 3D图：\
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/105.png)\
 
 
-* 2、在质心系下。同样可以得出木星质量变大10倍，100倍，1000倍的截面图和三维图：
+* 2、在质心系下。同样可以得出木星质量变大10倍，100倍，1000倍的截面图和三维图：\
 ①木星质量变大10倍:
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/107.png)\
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/108.png)\
@@ -176,10 +176,10 @@ show()
 
 
 ### 四、总结
-    1、改变初始条件时：可以发现，质心系下，保持总动量为0，在木星初始速度变大的条件下，地球绕太阳做圆周，但是太阳的位置偏离了中心。
-    2、改变木星的质量时：①当木星质量改为10倍时，太阳受影响很小。
-                       ②当木星质量改为100倍时，太阳做圆周运动，地球绕地球做圆周，木星不变。
-                       ③当木星质量改为1000倍时，木星偏离太阳。
+    1、改变初始条件时：可以发现，质心系下，保持总动量为0，在木星初始速度变大的条件下，地球绕太阳做圆周，但是太阳的位置偏离了中心。\
+    2、改变木星的质量时：①当木星质量改为10倍时，太阳受影响很小。\
+                       ②当木星质量改为100倍时，太阳做圆周运动，地球绕地球做圆周，木星不变。\
+                       ③当木星质量改为1000倍时，木星偏离太阳。\
     3、不同的条件下，三体问题会产生不同的运动。
    
 ### 五、致谢
