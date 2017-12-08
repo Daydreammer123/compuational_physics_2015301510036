@@ -1,50 +1,91 @@
 ## 第十一次作业
 
 ### 一、摘要
-   p143页5.3题：Show that the Poincare sections in Figure 3.17 are independent of the initial conditions.\
-   关键词：欧拉方法，混沌,流体力学，洛伦兹模型，Stokes方程。
+   p143页5.3题：Use the symmetry of the capacitor problem to write a program that obtains the results by calculating the potential in only one quadrant of x-y plane.\
+   关键词：雅克比方法，电容器，势场。
 
 ### 二、背景介绍
-本题的背景是天气现象研究中的洛伦兹模型。\
-在研究流体力学的基本方程，Navier-Stokes方程时，我们并将其应用简化成三个方程:\
-> ![](http://latex.codecogs.com/gif.latex?\frac{\mathrm{d}x}{\mathrm{d}t}{=}\sigma\left(y-x\right))\
-  ![](http://latex.codecogs.com/gif.latex?\frac{\mathrm{d}y}{\mathrm{d}t}{=}-xz+rx-y)\
-  ![](http://latex.codecogs.com/gif.latex?\frac{\mathrm{d}z}{\mathrm{d}t}{=}xy-bz)
-  
-其中x,y,z即Navier-Stokes方程中的温度，密度，速度；而r反映由温差带来的驱动效果，b则反应流体阻尼。
+用电容器问题的对称性来编写程序，通过计算x-y平面的一个象限中的电势来获得结果。\
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/112.png)
 
 ### 三、正文
-由欧拉方程得
-> ![](http://latex.codecogs.com/gif.latex?x_{i+1}{=}x_{i}+v_{x,i+1})\
-  ![](http://latex.codecogs.com/gif.latex?y_{i+1}{=}y_{i}+v_{y,i+1})\
-  ![](http://latex.codecogs.com/gif.latex?z_{i+1}{=}z_{i}+v_{z,i+1})\
-  ![](http://latex.codecogs.com/gif.latex?v_{x,i+1}{=}\sigma\left(y_{i}-x_{i}\right))\
-  ![](http://latex.codecogs.com/gif.latex?v_{y,i+1}{=}-y_{i}+rx_{i}-x_{i}z_{i})\
-  ![](http://latex.codecogs.com/gif.latex?v_{z,i+1}{=}-y_{i}x_{i}-bz_{i})
-
-可知Lprenz模型内流体运动显著依赖于驱动r，当改变驱动r的大小时，可观察到混沌的产生和消失。
-- [ ] 取![](http://latex.codecogs.com/gif.latex?\sigma=10,b=8/3),初始值x=1，y=z=0，在不同的r值时画出速度z随时间的变化曲线：
-
-code1：
+分析题意，列出二维有限差分形式如下：\
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/111.png)\
+在每一步更新的过程中，由于所求势场存在对称性，因此只需计算其中的对称部分，然后根据对称性直接对其他部分赋值即可。\
+下面我们利用Jacobi方法计算具有两固定势能的金属条的方形势场中电势能的分布情况
+1、code：
 ```python
+import math
+from mpl_toolkits.mplot3d import Axes3D
+from matplotlib import cm
+from matplotlib.ticker import LinearLocator, FormatStrFormatter
+from matplotlib import pyplot
+from matplotlib import numpy
 
+
+X = numpy.arange(-1, 1, 0.05)
+Y = numpy.arange(-1, 1, 0.05)
+V = []
+detV = 10000
+end_detV = 1e-5 * len(X)
+
+
+def update_V():
+    global detV
+    detV = 0
+    for i in xrange(1, len(X) - 1):
+        for j in xrange(1, len(Y) - 1):
+            if (i==len(X)/3 or i==len(X)*2/3) and len(Y)/3<j<len(Y)*2/3:
+                continue
+            tmp = (V[i-1][j] + V[i+1][j] + V[i][j-1] + V[i][j+1]) / 4
+            detV += numpy.abs(tmp - V[i][j])
+            V[i][j] = tmp
+
+
+# initialize V
+V.append([0. for i in xrange(len(X))])
+for i in xrange(1, len(X) - 1):
+    tmp = [0.]
+    for j in range(1, len(Y) - 1):
+        if i==len(X)/3 and len(Y)/3<j<len(Y)*2/3:
+            tmp.append(1.)
+        elif i==len(X)*2/3 and len(Y)/3<j<len(Y)*2/3:
+            tmp.append(-1.)
+        else:
+            tmp.append(0.)
+    tmp.append(0.)
+    V.append(tmp)
+V.append([0. for i in xrange(len(X))])
+
+while detV > end_detV:
+    update_V()
+
+X, Y = numpy.meshgrid(X, Y)
+
+fig = pyplot.figure()
+ax = fig.gca(projection='3d')
+ax.set_title(r"Electric potential near two metal plates")
+ax.set_xlabel(r'$x$')
+ax.set_ylabel(r'$y$')
+ax.set_zlabel(r'$V$')
+surf = ax.plot_surface(X, Y, V, rstride=1, cstride=1, cmap=cm.coolwarm,
+                       linewidth=0, antialiased=False)
+ax.set_zlim(-1.01, 1.01)
+ax.zaxis.set_major_locator(LinearLocator(10))
+ax.zaxis.set_major_formatter(FormatStrFormatter('%.02f'))
+
+fig.colorbar(surf, shrink=0.5, aspect=5)
+pyplot.show()
 ```
-
-![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/8-1.png)
-
-- [ ] 发现，在r值较小时，z出现阻尼衰减的现象，但当r值增大到一定值时出现了复杂的混沌现象.\
-于是我们将r值继续增大到160及163.8，作出相空间的图形：
-
-code2：
-```python
-
-```
-
-![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/8-4.png)
+2、效果：
+①电场：\
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/113.png)
+②电势：\
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/114.png)
 
 ### 四、总结
-   随着r的增加，Lorenz模型伴随着混沌现象的产生与消失。
-    
+   方法是先计算第一象限中的情况，然后用对称性，镜面和旋转对称到第二第三第四象限中，最后得到效果图。
+   
 ### 五、致谢
-    感谢张凡同学。
+    感谢王智麟同学的指导。
 
