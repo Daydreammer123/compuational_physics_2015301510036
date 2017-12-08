@@ -1,7 +1,7 @@
 ## 第十一次作业
 
 ### 一、摘要
-   p143页5.3题：Use the symmetry of the capacitor problem to write a program that obtains the results by calculating the potential in only one quadrant of x-y plane.\
+   p143页5.3题：Use the symmetry of the capacitor problem to write a program that obtains the results by calculating the potential in     only one quadrant of x-y plane.\
    关键词：雅克比方法，电容器，势场。
 
 ### 二、背景介绍
@@ -12,7 +12,7 @@
 分析题意，列出二维有限差分形式如下：\
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/111.png)\
 在每一步更新的过程中，由于所求势场存在对称性，因此只需计算其中的对称部分，然后根据对称性直接对其他部分赋值即可。\
-下面我们利用Jacobi方法计算具有两固定势能的金属条的方形势场中电势能的分布情况
+下面我们利用Jacobi方法计算具有两固定势能的金属条的方形势场中电势能的分布情况\
 1、code：
 ```python
 import math
@@ -79,7 +79,7 @@ pyplot.show()
 ```
 2、效果：
 ①电场：\
-![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/113.png)
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/113.png)\
 ②电势：\
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/114.png)
 
