@@ -9,10 +9,12 @@
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/112.png)
 
 ### 三、正文
+
 分析题意，列出二维有限差分形式如下：\
+
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/111.png)\
 由于所求势场存在对称性，因此只需计算其中的对称部分，然后根据对称性直接对其他部分赋值即可。\
-下面我们利用Jacobi方法计算具有两固定势能的金属条的方形势场中电势能的分布情况\
+下面我们利用Jacobi方法计算具有两固定势能的金属条的方形势场中电势能的分布情况
 
 1、code：
 ```python
@@ -78,7 +80,7 @@ ax.zaxis.set_major_formatter(FormatStrFormatter('%.02f'))
 fig.colorbar(surf, shrink=0.5, aspect=5)
 pyplot.show()
 ```
-2、效果：
+2、效果：\
 ①电场：\
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/113.png)\
 ②电势：\
