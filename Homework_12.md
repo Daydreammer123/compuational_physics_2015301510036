@@ -5,7 +5,8 @@
    关键词：波，频谱，傅里叶展开，边界条件。
 
 ### 二、背景介绍
-在经典物理学中，波是波，粒子是粒子.但在量子力学中，我们不得不承认粒子也是波动的.但是自由粒子肯定不是单色波，因为单色波不能归一化. \
+在经典物理学中，波是波，粒子是粒子.\
+但在量子力学中，我们不得不承认粒子也是波动的.但是自由粒子肯定不是单色波，因为单色波不能归一化. \
 实际上，一个粒子就是一个波包，它的动量就是所有由波包组成的单色波的平均动量。 \
 现在，我们将分析波包的特性。
 
@@ -15,13 +16,13 @@
 
 ### 三、正文
 中央波运动方程为：
-> ![](http://latex.codecogs.com/gif.latex?\frac{\partial^2y}{\partialt^2}=c^{2}\frac{\partial^2y}{\partialx^2})\
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/12-1.pgn)\
 波动方程可以写成有限差分形式,例如,：
   ![](http://latex.codecogs.com/gif.latex?y\left(i,n+1\right)=2\left[1-r^{2}\right]y\left(i,n\right)-y\left(i,n-1\right)+r^{2}\left[y\left(i+1,n\right)+y\left(i-1,n\right)\right])\
-我们设参数![](http://latex.codecogs.com/gif.latex?r=c\frac{\trianglet}{\trianglex})\
+我们设参数![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/12-2.pgn)\
 并使i从i=1依次取整数到i=M-1
 然后我们取所有端![](http://latex.codecogs.com/gif.latex?xy\left(0,n\right)=y\left(m,n\right)=0)，边界条件就固定了。
-  
+
 1、code：
 ```python
 from matplotlib import animation
