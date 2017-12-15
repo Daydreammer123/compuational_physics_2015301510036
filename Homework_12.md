@@ -87,11 +87,14 @@ show()
 ```
 2、效果：\
 ①设波长为1m，波速为300/s，r=1.\
-![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/1201.gif)\
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/1201.gif)
+
 ②叠加原理：在①的基础上加一个波包。\
-![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/1202.gif)\
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/1202.gif)
+
 ③半波损失：设波在两个介质中的传播速度分别是：v1=300/s,v2=150m/s，在介质分界面发生半波损失.
-![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/1203.gif)\
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/1203.gif)
+
 ④假设③中第二介质密度更高,v3=125m/s
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/1204.gif)
 
