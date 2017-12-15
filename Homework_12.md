@@ -11,24 +11,16 @@
 
     在本章中，我们将考虑关于波浪运动的主题。\
     首先，我们假设波在一个完美的无摩擦的弦上运动.然后我们再考虑更加复杂一点的情况。 \
-    观察到了一些有趣的现象，例如波浪的半损失和叠加。\
-> ![](http://latex.codecogs.com/gif.latex?\frac{\mathrm{d}x}{\mathrm{d}t}{=}\sigma\left(y-x\right))\
-  ![](http://latex.codecogs.com/gif.latex?\frac{\mathrm{d}y}{\mathrm{d}t}{=}-xz+rx-y)\
-  ![](http://latex.codecogs.com/gif.latex?\frac{\mathrm{d}z}{\mathrm{d}t}{=}xy-bz)
-
+    观察到了一些有趣的现象，例如波浪的半损失和叠加。
 
 ### 三、正文
-波浪运动的中心是：
-> ![](http://latex.codecogs.com/gif.latex?x_{i+1}{=}x_{i}+v_{x,i+1})\
-常规传播模拟波浪上的一个字符串。使用：
-  ![](http://latex.codecogs.com/gif.latex?y_{i+1}{=}y_{i}+v_{y,i+1})\
-来更新
-  ![](http://latex.codecogs.com/gif.latex?z_{i+1}{=}z_{i}+v_{z,i+1})\
-设置参数组合
-  ![](http://latex.codecogs.com/gif.latex?v_{x,i+1}{=}\sigma\left(y_{i}-x_{i}\right))\
-循环内部点i = 1到i = M-1
-根据y（i，n + 1）更新
-在i = 0和i = M处的末端是固定的，所以y（0，n）= y（M，n）= 0。
+中央波运动方程为：
+> ![](http://latex.codecogs.com/gif.latex?\frac{\partial^2y}{\partialt^2}=c^{2}\frac{\partial^2y}{\partialx^2})\
+波动方程可以写成有限差分形式,例如,：
+  ![](http://latex.codecogs.com/gif.latex?y\left(i,n+1\right)=2\left[1-r^{2}\right]y\left(i,n\right)-y\left(i,n-1\right)+r^{2}\left[y\left(i+1,n\right)+y\left(i-1,n\right)\right])\
+我们设参数![](http://latex.codecogs.com/gif.latex?r=c\frac{\trianglet}{\trianglex})\
+并使i从i=1依次取整数到i=M-1
+然后我们取所有端![](http://latex.codecogs.com/gif.latex?xy\left(0,n\right)=y\left(m,n\right)=0)，边界条件就固定了。
   
 1、code：
 ```python
