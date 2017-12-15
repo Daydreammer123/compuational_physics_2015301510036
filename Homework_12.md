@@ -16,10 +16,10 @@
 
 ### 三、正文
 中央波运动方程为：
-![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/12-1.pgn)\
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/12-1.png)\
 波动方程可以写成有限差分形式,例如,：
   ![](http://latex.codecogs.com/gif.latex?y\left(i,n+1\right)=2\left[1-r^{2}\right]y\left(i,n\right)-y\left(i,n-1\right)+r^{2}\left[y\left(i+1,n\right)+y\left(i-1,n\right)\right])\
-我们设参数![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/12-2.pgn)\
+我们设参数![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/12-2.png)\
 并使i从i=1依次取整数到i=M-1
 然后我们取所有端![](http://latex.codecogs.com/gif.latex?xy\left(0,n\right)=y\left(m,n\right)=0)，边界条件就固定了。
 
