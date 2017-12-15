@@ -84,13 +84,22 @@ def init():
 anim=animation.FuncAnimation(f,animate,init_func=init,frames=200,interval=50,blit=True)#frames mean zhenshu,interval mean each frame last how long
 show()
 ```
-2、刺激两个波包的碰撞如下：
-![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/8-4.png)
+2、效果：\
+①设波长为1m，波速为300/s，r=1.\
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/1201.gif)
+②叠加原理：在①的基础上加一个波包。\
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/1202.gif)
+③半波损失：设波在两个介质中的传播速度分别是：v1=300/s,v2=150m/s，在介质分界面发生半波损失.
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/1203.gif)
+④假设③中第二介质密度更高,v3=125m/s
+![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/1204.gif)
 
 ### 四、总结
-   From the simulation wave packages' propagate. Then we verify superposition principle of waves that wavepackets are unaffected by collisions.It reveals many intrinsic properties of waves.
-   从仿真波包传播。 然后验证波包不受碰撞影响的波叠加原理，揭示了波的许多固有特性。
+   从波包传播的仿真，然后验证波包不受碰撞影响的波叠加原理，揭示了波的许多固有特性。\
+   ①一个波包会自动分解为两个波包,它们沿反向传播，而且当波传播到尽头时,它在垂直方向返现，水平速度也会反向。\
+   ②由于波函数是线性的，满足线性叠加原则，所以两个波包重叠时速度互不影响，形状线性叠加，但本质不变。\
+   ③第二介质密度越大，振幅越小，即半波损失。由于入射角是零,当波从一个稀疏介质传播到密介质,反射波的相位突变π,损失了波长的一半。所以反射波的传播方向改变,但透射波不变。
     
 ### 五、致谢
-    感谢张凡同学。
+    感谢王智霖同学的指导。
 
