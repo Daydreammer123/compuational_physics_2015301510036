@@ -85,7 +85,7 @@
 
 #### ② 下面我们具体研究![](http://latex.codecogs.com/gif.latex?\bar{x})的波动幅度与步数n的关系。
 
- →[[程序1-2]](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project1-2.py)
+ →[[程序1-2]](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/files/%E7%A8%8B%E5%BA%8F1-2.py)
 
 下图是一次模拟中![](http://latex.codecogs.com/gif.latex?\bar{x^{2}})随步数n的变化
  ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0103.png)
@@ -105,7 +105,7 @@
 
 #### ③ 接下来，我们取消步长为固定值的限制，使每步的位移在[-1,1]间等概率随机取值。
 
-→[[程序1-3]](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project1-3.py)
+→[[程序1-3]](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/files/%E7%A8%8B%E5%BA%8F1-3.py)
 
  我们同样取行人人数为10000，模拟三次得如下结果
  ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0107.png)
@@ -122,7 +122,7 @@
 
 #### ④ 下面我们具体研究![](http://latex.codecogs.com/gif.latex?\bar{x})的波动幅度与步数n的关系。
 
-→[[程序1-4]](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project1-4.py)
+→[[程序1-4]](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/files/%E7%A8%8B%E5%BA%8F1-4.py)
 
 
  下图是一次模拟中![](http://latex.codecogs.com/gif.latex?\bar{x^{2}})随步数n的变化
@@ -133,7 +133,7 @@
 
 #### ⑤ 下面，我们按照T7.3所说，研究当行人向两个方向移动的概率不等时的情况，我们取向左移动的概率为0.25，从而向右移动的概率为0.75。
 
- →[[程序1-5]](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project1-5.py)
+ →[[程序1-5]](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/files/%E7%A8%8B%E5%BA%8F1-5.py)
 
  我们同样取行人人数为10000，模拟三次得如下结果
  ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0111.png)
@@ -147,7 +147,7 @@
 
 #### ⑥ 接着我们具体研究![](http://latex.codecogs.com/gif.latex?\bar{x^{2}})与步数n的关系。
 
-→[[程序1-6]](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project1-6.py)
+→[[程序1-6]](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/files/%E7%A8%8B%E5%BA%8F1-6.py)
 
  下图是一次模拟中![](http://latex.codecogs.com/gif.latex?\bar{x^{2}})随步数的变化
  ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0113.png)
@@ -161,13 +161,13 @@
 
 #### ⑦ 为了更直观地理解随机行走的过程，我们可以使用python中的turtle模块绘制二维点阵随机游走示意动画。
 
-→[[程序1-7-1]](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project2-1.py)
+→[[程序1-7-1]](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/files/%E7%A8%8B%E5%BA%8F1-7-1.py)
 
 这是17*17网格上的随机游走动画
 
  ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0115.gif)
 
-→[[程序1-7-2]](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project2-2.py)
+→[[程序1-7-2]](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/files/%E7%A8%8B%E5%BA%8F1-7-2.py)
 
  这是 33*33网格上的随机游走动画
 
@@ -177,7 +177,7 @@
 
 #### ⑧ 接着，我们模拟在每一步的方向和步幅都随机的情况下的二维随机游走轨迹。
 
-→[[程序1-8]](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project2-3.py)
+→[[程序1-8]](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/files/%E7%A8%8B%E5%BA%8F1-8.py)
 
  下面是模拟的轨迹图
  ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0117.png)
@@ -185,7 +185,7 @@
 
 #### ⑨ 此外，我们还可以较为容易地模拟三维点阵随机游走的轨迹。
 
- →[[程序1-9]](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project2-4.py)
+ →[[程序1-9]](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/files/%E7%A8%8B%E5%BA%8F1-9.py)
 
  下面是模拟的轨迹图
 
