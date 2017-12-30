@@ -1,8 +1,8 @@
 ## 期末论文
 
 ### 一、摘要
-   p181-235页 chapter 7：Rndom Systems.\
-   关键词：随机游走；扩散；菲克定律；熵。
+   p181-235页 chapter 7：Rndom Systems：We consider a class of systems in which randomness plays a central role.These are called random or stochastic systems.\
+   关键词：随机游走；随机数；统计学；扩散；菲克定律；无序；熵。
 
 ### 二、背景介绍
 - 本文从随机游走出发，先研究了随机游走的一些性质，而后探究了扩散过程和随机游走的联系，并粗略探讨了扩散过程中的熵变。\
