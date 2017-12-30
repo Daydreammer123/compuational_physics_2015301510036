@@ -71,8 +71,7 @@
   
 ### 三、正文
 * 1、点阵随机游走
-### ①
-  我们先考虑随机游走模型中相对简单的情形，一个行人以固定步幅在一条直线上等概率地沿两个方向之一行走。为使结果更具普遍性，我们假设同时有若干人在随机游走，研究他们走完每一步后与原点之间的平均距离。
+#### ① 我们先考虑随机游走模型中相对简单的情形，一个行人以固定步幅在一条直线上等概率地沿两个方向之一行走。为使结果更具普遍性，我们假设同时有若干人在随机游走，研究他们走完每一步后与原点之间的平均距离。
 
   实现该程序的关键是如何模拟行人们等几率的向两个方向行走。我们可以通过产生一个介于0和1之间的随机数r来实现：若r<0.5，则行人向右走一步，否则行人向左走一步。
 
@@ -84,8 +83,7 @@
 
  ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0102.png)
 
-### ②
-  下面我们具体研究![](http://latex.codecogs.com/gif.latex?\bar{x})的波动幅度与步数n的关系。
+#### ② 下面我们具体研究![](http://latex.codecogs.com/gif.latex?\bar{x})的波动幅度与步数n的关系。
 
  →[[程序1-2]](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project1-2.py)
 
@@ -105,8 +103,7 @@
 
  ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0106.png)
 
-### ③
-  接下来，我们取消步长为固定值的限制，使每步的位移在[-1,1]间等概率随机取值。
+#### ③ 接下来，我们取消步长为固定值的限制，使每步的位移在[-1,1]间等概率随机取值。
 
 →[[程序1-3]](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project1-3.py)
 
@@ -123,8 +120,7 @@
  ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0109.png)
 
 
-### ④
-  下面我们具体研究![](http://latex.codecogs.com/gif.latex?\bar{x})的波动幅度与步数n的关系。
+#### ④ 下面我们具体研究![](http://latex.codecogs.com/gif.latex?\bar{x})的波动幅度与步数n的关系。
 
 →[[程序1-4]](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project1-4.py)
 
@@ -135,8 +131,7 @@
 
 可以看出，![](http://latex.codecogs.com/gif.latex?\bar{x^{2}})的值虽然与步数n仍成正比，但其值要比之前小很多。
 
-### ⑤
-  下面，我们按照T7.3所说，研究当行人向两个方向移动的概率不等时的情况，我们取向左移动的概率为0.25，从而向右移动的概率为0.75。
+#### ⑤ 下面，我们按照T7.3所说，研究当行人向两个方向移动的概率不等时的情况，我们取向左移动的概率为0.25，从而向右移动的概率为0.75。
 
  →[[程序1-5]](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project1-5.py)
 
@@ -150,8 +145,7 @@
 
 显然，这与模拟结果一致。
 
-### ⑥
-  接着我们具体研究![](http://latex.codecogs.com/gif.latex?\bar{x^{2}})与步数n的关系。
+#### ⑥ 接着我们具体研究![](http://latex.codecogs.com/gif.latex?\bar{x^{2}})与步数n的关系。
 
 →[[程序1-6]](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project1-6.py)
 
@@ -165,8 +159,7 @@
 
 经验算，所得曲线和该式符合很好。
 
-### ⑦
-  为了更直观地理解随机行走的过程，我们可以使用python中的turtle模块绘制二维点阵随机游走示意动画。
+#### ⑦ 为了更直观地理解随机行走的过程，我们可以使用python中的turtle模块绘制二维点阵随机游走示意动画。
 
 →[[程序1-7-1]](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project2-1.py)
 
@@ -182,8 +175,7 @@
 
 我们可以看出红色箭头会在出发点附近一定大小的区域内游走相当长的时间。事实上，对于一维和二维点阵随机游走，只要步数足够大，任意游动的点必定能返回它的出发点，该定理是著名数学家波利亚在1921年证明的。
 
-### ⑧
-  接着，我们模拟在每一步的方向和步幅都随机的情况下的二维随机游走轨迹。
+#### ⑧ 接着，我们模拟在每一步的方向和步幅都随机的情况下的二维随机游走轨迹。
 
 →[[程序1-8]](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project2-3.py)
 
@@ -191,7 +183,7 @@
  ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0117.png)
 
 
-### ⑨此外，我们还可以较为容易地模拟三维点阵随机游走的轨迹。
+#### ⑨ 此外，我们还可以较为容易地模拟三维点阵随机游走的轨迹。
 
  →[[程序1-9]](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project2-4.py)
 
@@ -204,8 +196,7 @@
 
 * 2、扩散:\
  我们之前曾提到，随机游走和扩散是等价的，宏观上观测到的扩散现象其实就是大量粒子的随机游走行为。
- ### ①
-   下面为了研究扩散问题的处理方法，我们讨论单个粒子在简单立方点阵中的随机游走。
+ 下面为了研究扩散问题的处理方法，我们讨论单个粒子在简单立方点阵中的随机游走。
 
  记![](http://latex.codecogs.com/gif.latex?P\left(i,j,k,n\right))为粒子在n时刻 出现在点![](http://latex.codecogs.com/gif.latex?\left(i,j,k\right))处的概率。要使粒子在n时刻出现在点![](http://latex.codecogs.com/gif.latex?\left(i,j,k\right)))，则在n-1时刻，粒子必须在与[](http://latex.codecogs.com/gif.latex?\left(i,j,k\right))相邻的六个阵点上，又从每个相邻阵点运动到[](http://latex.codecogs.com/gif.latex?\left(i,j,k\right))的概率为1/6，则有如下递推式
  ![image](0201)
@@ -223,7 +214,7 @@
 
 其实，当体系有大量粒子时，他们某一时刻出现在某一位置的概率 P之和即为该时刻该位置的粒子数密度。
 
- ①在一维情况下，我们将粒子数密度函数写为 ![image](0207)，则对应的扩散方程为
+#### ①在一维情况下，我们将粒子数密度函数写为 ![image](0207)，则对应的扩散方程为
  ![image](0208)
 
 其有限差分形式如下
@@ -244,8 +235,7 @@
 
  ![image](0212)
 
-### ② 
-  我们接下来研究教材提到的奶油在咖啡中溶解的问题。该问题可合理简化为初始时刻在一个正方形区域内均匀分布的粒子的二维扩散问题。我们首先用扩散方程所得递推式进行模拟。
+#### ② 我们接下来研究教材提到的奶油在咖啡中溶解的问题。该问题可合理简化为初始时刻在一个正方形区域内均匀分布的粒子的二维扩散问题。我们首先用扩散方程所得递推式进行模拟。
 
 →[[程序2-2]](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project4-1.py)
 
