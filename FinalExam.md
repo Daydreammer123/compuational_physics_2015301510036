@@ -135,7 +135,7 @@
 
  →[[程序1-5]](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/files/%E7%A8%8B%E5%BA%8F1-5.py)
 
- 我们同样取行人人数为10000，模拟三次得如下结果
+ 我们同样取行人人数为10000，模拟得如下结果
  ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0111.png)
 
 不难看出，![](http://latex.codecogs.com/gif.latex?\bar{x^{2}})的值约为步数n的1/2。
