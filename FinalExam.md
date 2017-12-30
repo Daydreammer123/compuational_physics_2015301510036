@@ -28,7 +28,7 @@
     扩散以一个初始分布释放大量的无规则行走，观察他们的密度，就会得到分布函数。\
   扩散是一个随机涨落的过程，在本科一年级的物理课程已经提及一个落体最终会达到取决于摩擦的“末速度”。以悬浮颗粒来考虑摩擦，颗粒虽然受随机碰撞，仍获得了一个净漂移速度。v=f/ζ ，ζ=2m/Δt ，其中ζ是黏性摩擦系数，与扩散系数一样可以实验测量。摩擦源于物理实体与周围热致扰动的流体随机碰撞。每一种颗粒当置于不同的溶剂中时都会有相应特征D（扩散系数）和ζ。\
   
-  ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/3003.pgn)
+  ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/3003.png)
   
     由于有效步长a 和Δt 无法观察，要想证实扩散与粘滞仅仅是热运动的两个方面，我们还需要第三个关系。爱因斯坦注意到a 和Δt 的关系，按照推到理想气体定律的思路：(a/Δt)2=kBT/m，联合起来就构成爱因斯坦第一扩散公式：ζD=kBT。越小的颗粒受到摩擦阻力越小，但扩散系数会更大，更容易扩散。ζD 的乘积提供了一个可证伪的预言来检验“热即分子的无规则运动”；这个预言提出不久就立刻被佩兰（Jeans Perrin）和其他人的实验所证实。任何无规则行走携带的守恒量都各自对应一个扩散定律。\
      扩散以一个初始分布释放大量的无规则行走，观察他们的密度就会得到分布函数。1855年法国生理学家阿道夫·菲克提出了描述扩散规律的基本公式——菲克定律。
@@ -37,21 +37,21 @@
    
    ①菲克第一定律,假设从高浓度区域往低浓度流的通量大小与浓度梯度（空间导数）成正比，通过这个假设，菲克第一定律把扩散通量与浓度联系起来。在一维空间下的菲克第一定律如下： 
    
- ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/3005.pgn)  
+ ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/3005.png)  
  
  根据斯托克斯-爱因斯坦关系，D的大小取决于温度、流体黏度与分子大小，并与扩散分子流动的平均速度平方成正比。
   
    ②在二维或以上的情况下，我们必须把第一导数通用化，得
   
-  ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/3006.pgn) 
+  ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/3006.png) 
   
   菲克第二定律预测扩散会如何使得浓度随时间改变：
   
-  ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/3007.pgn)
+  ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/3007.png)
   
   对于二维或以上的扩散，其菲克第二定律为：
   
-  ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/3008.pgn)  
+  ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/3008.png)  
   
   其形式跟热传导方程类似。
  
@@ -61,7 +61,7 @@
   （i）所有粒子的位置皆在容器的体积范围内；\
   （ii）所有原子的动能总和等于该气体的总能量值。\
     玻尔兹曼提出一个系统的熵和所有可能微观状态的数目满足以下简单关系：
-    ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/3009.pgn)
+    ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/3009.png)
  
   这个公式称为“玻尔兹曼公式”，根据玻尔兹曼的定义，熵是一则关于状态的函数.根据这个公式，我们可以将熵看作是一个系统“混乱程度”的度量，因为一个系统越混乱，可以看作是微观状态分布越均匀。根据熵的统计学定义，热力学第二定律说明一个孤立系统的倾向于增加混乱程度。
 
