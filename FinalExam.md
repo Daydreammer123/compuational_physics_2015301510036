@@ -199,29 +199,29 @@
  下面为了研究扩散问题的处理方法，我们讨论单个粒子在简单立方点阵中的随机游走。
 
  记![](http://latex.codecogs.com/gif.latex?P\left(i,j,k,n\right))为粒子在n时刻 出现在点![](http://latex.codecogs.com/gif.latex?\left(i,j,k\right))处的概率。要使粒子在n时刻出现在点![](http://latex.codecogs.com/gif.latex?\left(i,j,k\right)))，则在n-1时刻，粒子必须在与[](http://latex.codecogs.com/gif.latex?\left(i,j,k\right))相邻的六个阵点上，又从每个相邻阵点运动到[](http://latex.codecogs.com/gif.latex?\left(i,j,k\right))的概率为1/6，则有如下递推式
- ![image](0201)
+ ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0201.png)
 
 改写上式，可得
- ![image](0202)
+ ![image](0https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0202.png)
  
 等式两边同乘常量 ![image](0203)，由之前章节对拉普拉斯算子的讨论，可将等式化为
- ![image](0204)
+ ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0204.png)
 
-其中 ![image](0205)
+其中 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0205.png)
 
 我们发现上式与我们之前提到的扩散方程形式完全一样
- ![image](0206)
+ ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0206.png)
 
 其实，当体系有大量粒子时，他们某一时刻出现在某一位置的概率 P之和即为该时刻该位置的粒子数密度。
 
-#### ①在一维情况下，我们将粒子数密度函数写为 ![image](0207)，则对应的扩散方程为
- ![image](0208)
+#### ①在一维情况下，我们将粒子数密度函数写为 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0207.png)，则对应的扩散方程为
+ ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0208.png)
 
 其有限差分形式如下
- ![image](0209)
+ ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0209.png)
 
 改写为递推形式有
- ![image](0210)
+ ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0210.png)
 
 可见，如果我们知道粒子的初始分布，就可求得他们之后时刻的分布。
 
@@ -229,31 +229,31 @@
 
 →[[程序2-1]](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project3-1.py)
 
- ![image](0211)
+ ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0211.png)
 
 如习题T7.9所说，扩散进行一段时间后，粒子呈正态分布（高斯分布）
 
- ![image](0212)
+ ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0212.png)
 
 #### ② 我们接下来研究教材提到的奶油在咖啡中溶解的问题。该问题可合理简化为初始时刻在一个正方形区域内均匀分布的粒子的二维扩散问题。我们首先用扩散方程所得递推式进行模拟。
 
 →[[程序2-2]](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project4-1.py)
 
  我们用高度表示某一位置的粒子数密度，初始时刻的分布如下
- ![image](0213)
+ ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0213.png)
 
 当n=50时的分布如下
- ![image](0214)
+ ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0214.png)
 
 当n=500时的分布如下
- ![image](0216)
+ ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0216.png)
 
 当n=4000时的分布如下
- ![image](0217)
+ ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0217.png)
 
 * 3扩散过程中的熵
 如之前所说，熵的统计学定义为
- ![image](0218）
+ ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0218.png）
 
 运用该式，我们就可计算各种过程中的熵。
  
@@ -262,7 +262,7 @@
 →[[程序3-1]](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project5-1.py)
 
  模拟所得扩散过程中不同时刻的熵如下
- ![image](0219）
+ ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0219.png）
 
 可以看出，在奶油溶解的过程中，体系的熵一直在增加，且熵随时间（步数）变化的函数图像大致为一个向左平移后的对数函数。
 
