@@ -27,14 +27,15 @@
    扩散以一个初始分布释放大量的无规则行走，观察他们的密度就会得到分布函数。1855年法国生理学家阿道夫·菲克提出了描述扩散规律的基本公式——菲克定律。 
    
    不同尺度下观察到的扩散过程: \
+    ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/111111111.png)
    ①菲克第一定律假设从高浓度区域往低浓度流的通量大小与浓度梯度（空间导数）成正比，通过这个假设，菲克第一定律把扩散通量与浓度联系起来。在一维空间下的菲克第一定律如下： 
-<div align=center><a href="http://www.codecogs.com/eqnedit.php?latex=J=-D\frac{\partial&space;\phi&space;}{\partial&space;x}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?J=-D\frac{\partial&space;\phi&space;}{\partial&space;x}" title="J=-D\frac{\partial \phi }{\partial x}" /></a></div> 
-  根据斯托克斯-爱因斯坦关系，<a href="http://www.codecogs.com/eqnedit.php?latex=D" target="_blank"><img src="http://latex.codecogs.com/gif.latex?D" title="D" /></a>的大小取决于温度、流体黏度与分子大小，并与扩散分子流动的平均速度平方成正比。 
+  #
+  根据斯托克斯-爱因斯坦关系， # 的大小取决于温度、流体黏度与分子大小，并与扩散分子流动的平均速度平方成正比。 
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/111111111.png)
-  ②在二维或以上的情况下，我们必须使用 <a href="http://www.codecogs.com/eqnedit.php?latex=\nabla" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\nabla" title="\nabla" /></a>  来把第一导数通用化，得 
-<div align=center><a href="http://www.codecogs.com/eqnedit.php?latex=J=-D\nabla\phi" target="_blank"><img src="http://latex.codecogs.com/gif.latex?J=-D\nabla\phi" title="J=-D\nabla\phi" /></a></div> 
+  ②在二维或以上的情况下，我们必须使用  # 来把第一导数通用化，得 
+ # 
   对于二维或以上的扩散，其菲克第二定律为： 
-<div align=center><a href="http://www.codecogs.com/eqnedit.php?latex=\frac{\partial&space;\phi&space;}{\partial&space;t}=D\nabla^{2}\varphi" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\frac{\partial&space;\phi&space;}{\partial&space;t}=D\nabla^{2}\varphi" title="\frac{\partial \phi }{\partial t}=D\nabla^{2}\varphi" /></a></div> 
+ #  
   其形式跟热传导方程类似。
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/111111111.png)
 - 熵:![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/111111111.png)
@@ -44,7 +45,7 @@
   （i）所有粒子的位置皆在容器的体积范围内；\
   （ii）所有原子的动能总和等于该气体的总能量值。\
   玻尔兹曼提出一个系统的熵和所有可能微观状态的数目满足以下简单关系：\
-<div align=center><a href="http://www.codecogs.com/eqnedit.php?latex=S=k\ln\Omega" target="_blank"><img src="http://latex.codecogs.com/gif.latex?S=k\ln\Omega" title="S=k\ln\Omega" /></a></div>
+ # 
   这个公式称为“玻尔兹曼公式”，根据玻尔兹曼的定义，熵是一则关于状态的函数.根据这个公式，我们可以将熵看作是一个系统“混乱程度”的度量，因为一个系统越混乱，可以看作是微观状态分布越均匀。根据熵的统计学定义，热力学第二定律说明一个孤立系统的倾向于增加混乱程度。
 
 
