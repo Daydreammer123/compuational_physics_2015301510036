@@ -1,25 +1,24 @@
-import matplotlib as mpl
-from mpl_toolkits.mplot3d import Axes3D
-import matplotlib.pyplot as plt
-import random
+from mpl_toolkits.mplot3d import Axes3D 
+import matplotlib.pyplot as plt      
+from matplotlib import animation 
 
-mpl.rcParams['legend.fontsize'] = 10
-
+def show_trajectory(self):
 fig = plt.figure()
-ax = fig.gca(projection='3d')
+ax =Axes3D(fig)
+line1=ax.plot([],[],'b:')
+point1=ax.plot([],[],'bo',markersize=10)
+images=[]
 
-xyz = []
-cur = [0, 0, 0]
+def init():
+line1 = ax.plot([], [], 'b', markersize=8)
+point1 = ax.plot([], [], 'ro', markersize=10)
+return line1, point1
 
-for _ in range(888):
-    axis = random.randrange(0, 3)
-    cur[axis] += random.choice([-1, 1])
-    xyz.append(cur[:])
+def anmi(i):
+ax.clear()
+line1 = ax.plot(self.x[0:(1 * i)], self.y[0:(1 * i)], self.z[0:1*i],'b', markersize=8)
+point1 = ax.plot(self.x[(1 * i - 1):(1 * i)], self.y[(1 * i - 1):(1 * i)], self.z[1 * i -1:1 * i],'ro', markersize=10)
+return line1, point1
 
-x, y, z = zip(*xyz)
-ax.plot(x, y, z,c='darkslategrey',alpha=0.6, label='Random walk')
-ax.scatter(x[0], y[0], z[0], c='deepskyblue',s=55,alpha=0.6, marker='o',label='Start point')
-ax.scatter(x[-1], y[-1], z[-1], c='crimson',s=55,alpha=0.6, marker='<',label='End point')   # End point
-ax.legend()
-plt.title('3D lattice random walk')
-plt.show()
+anmi = animation.FuncAnimation(fig, anmi, init_func=init, frames=100, interval=1,blit=False,repeat=False)
+ plt.show()
