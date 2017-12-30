@@ -70,7 +70,7 @@
 
   
 ### 三、正文
-* 1、点阵随机游走
+#### * 1、点阵随机游走
 #### ① 我们先考虑随机游走模型中相对简单的情形，一个行人以固定步幅在一条直线上等概率地沿两个方向之一行走。为使结果更具普遍性，我们假设同时有若干人在随机游走，研究他们走完每一步后与原点之间的平均距离。
 
   实现该程序的关键是如何模拟行人们等几率的向两个方向行走。我们可以通过产生一个介于0和1之间的随机数r来实现：若r<0.5，则行人向右走一步，否则行人向左走一步。
@@ -194,7 +194,7 @@
 
  我们可以看出多数情况下，动点出发后离原点越来越远，没有返回出发点的迹象。实际上，波利亚也证明了在三维网格中随机游走，最终能回到出发点的概率只有大约 34% ，而且随着维度的增 加，回到出发点的概率将变得越来越低。在四维网格中随机游走，最终能回到出发点 的概率是 19.3% ，而在八维空间中，这个概率只有 7.3% 。 
 
-* 2、扩散:\
+#### * 2、扩散:\
  我们之前曾提到，随机游走和扩散是等价的，宏观上观测到的扩散现象其实就是大量粒子的随机游走行为。
  下面为了研究扩散问题的处理方法，我们讨论单个粒子在简单立方点阵中的随机游走。
 
@@ -253,7 +253,7 @@
 当n=4000时的分布如下
  ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0217.png)
 
-* 3扩散过程中的熵
+#### * 3扩散过程中的熵
 如之前所说，熵的统计学定义为\
  ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0218.png)
 
@@ -261,7 +261,7 @@
  
  下面我们就按习题T7.12的要求来模拟计算奶油在咖啡中溶解过程中的熵随时间的变化。
 
-→[[程序3-1]](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/files/%E7%A8%8B%E5%BA%8F3-1.pyy)
+→[[程序3-1]](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/files/%E7%A8%8B%E5%BA%8F3-1.py)
 
  模拟所得扩散过程中不同时刻的熵如下\
  ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0219.png)
@@ -279,13 +279,13 @@
 
 ---
 
-#### 参考文献
+### 参考文献
 
-**[1]**Nicholas J. Giordano，Hisao Nakanishi. 计算物理（第2版）[M]. 北京：清华大学出版社，2007.181-206.
+[1]Nicholas J. Giordano，Hisao Nakanishi. 计算物理（第2版）[M]. 北京：清华大学出版社，2007.181-206.
 
-**[2]**Y. Daniel Liang.RandomWalk[EB/OL].http://www.cs.armstrong.edu/liang/py/html/RandomWalk.html ，2016.
+[2] Y. Daniel Liang.RandomWalk[EB/OL].http://www.cs.armstrong.edu/liang/py/html/RandomWalk.html ，2016.
 
-**[3]**tacaswell.Problems plotting a 2D random walk with Python[EB/OL].http://stackoverflow.com/questions/27282835/problems-plotting-a-2d-random-walk-with-python ，2014.
+[3] tacaswell.Problems plotting a 2D random walk with Python[EB/OL].http://stackoverflow.com/questions/27282835/problems-plotting-a-2d-random-walk-with-python ，2014.
 
-**[4]**Martin Evans.Plotting 3D random walk in Python[EB/OL].http://stackoverflow.com/questions/34920680/plotting-3d-random-walk-in-python ，2016. 
+[4] Martin Evans.Plotting 3D random walk in Python[EB/OL].http://stackoverflow.com/questions/34920680/plotting-3d-random-walk-in-python ，2016. 
 
