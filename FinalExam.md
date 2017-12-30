@@ -203,129 +203,109 @@
 * 2、扩散
  我们之前曾提到，随机游走和扩散是等价的，宏观上观测到的扩散现象其实就是大量粒子的随机游走行为。下面为了研究扩散问题的处理方法，我们讨论单个粒子在简单立方点阵中的随机游走。
 
- 记* 1、为粒子在<a href="http://www.codecogs.com/eqnedit.php?latex=n" target="_blank"><img src="http://latex.codecogs.com/gif.latex?n" title="n" /></a>时刻（即第<a href="http://www.codecogs.com/eqnedit.php?latex=n" target="_blank"><img src="http://latex.codecogs.com/gif.latex?n" title="n" /></a>步）出现在点<a href="http://www.codecogs.com/eqnedit.php?latex=(i,j,k)" target="_blank"><img src="http://latex.codecogs.com/gif.latex?(i,j,k)" title="(i,j,k)" /></a>处的概率。要使粒子在<a href="http://www.codecogs.com/eqnedit.php?latex=n" target="_blank"><img src="http://latex.codecogs.com/gif.latex?n" title="n" /></a>时刻出现在点<a href="http://www.codecogs.com/eqnedit.php?latex=(i,j,k)" target="_blank"><img src="http://latex.codecogs.com/gif.latex?(i,j,k)" title="(i,j,k)" /></a>，则在<a href="http://www.codecogs.com/eqnedit.php?latex=n-1" target="_blank"><img src="http://latex.codecogs.com/gif.latex?n-1" title="n-1" /></a>时刻，粒子必须在与<a href="http://www.codecogs.com/eqnedit.php?latex=(i,j,k)" target="_blank"><img src="http://latex.codecogs.com/gif.latex?(i,j,k)" title="(i,j,k)" /></a>相邻的六个阵点上，又从每个相邻阵点运动到<a href="http://www.codecogs.com/eqnedit.php?latex=(i,j,k)" target="_blank"><img src="http://latex.codecogs.com/gif.latex?(i,j,k)" title="(i,j,k)" /></a>的概率为<a href="http://www.codecogs.com/eqnedit.php?latex=\frac{1}{6}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\frac{1}{6}" title="\frac{1}{6}" /></a>，则有如下递推式
-
-
-<div align=center><a href="http://www.codecogs.com/eqnedit.php?latex=P(i,j,k,n)=\frac{1}{6}[P(i&plus;1,j,k,n-1)&plus;P(i-1,j,k,n-1)&plus;P(i,j&plus;1,k,n-1)\\&plus;P(i,j-1,k,n-1)&plus;P(i,j,k&plus;1,n-1)&plus;P(i,j,k-1,n-1)]" target="_blank"><img src="http://latex.codecogs.com/gif.latex?P(i,j,k,n)=\frac{1}{6}[P(i&plus;1,j,k,n-1)&plus;P(i-1,j,k,n-1)&plus;P(i,j&plus;1,k,n-1)\\&plus;P(i,j-1,k,n-1)&plus;P(i,j,k&plus;1,n-1)&plus;P(i,j,k-1,n-1)]" title="P(i,j,k,n)=\frac{1}{6}[P(i+1,j,k,n-1)+P(i-1,j,k,n-1)+P(i,j+1,k,n-1)\\+P(i,j-1,k,n-1)+P(i,j,k+1,n-1)+P(i,j,k-1,n-1)]" /></a></div>
+ 记* 1、为粒子在 ![image]()步）出现在点 ![image]()处的概率。要使粒子在 ![image]()时刻出现在点 ![image]()，则在 ![image]()时刻，粒子必须在与 ![image]()相邻的六个阵点上，又从每个相邻阵点运动到 ![image]()的概率为 ![image]()，则有如下递推式
+ ![image]()
 
 改写上式，可得
+ ![image]()
+ ![image]()
+ 
+等式两边同乘常量 ![image]()，由之前章节对拉普拉斯算子的讨论，可将等式化为
+ ![image]()
 
-<div align=center><a href="http://www.codecogs.com/eqnedit.php?latex=P(i,j,k,n)-P(i,j,k,n-1)\\=\frac{1}{6}[P(i&plus;1,j,k,n-1)-2P(i,j,k,n-1)&plus;P(i-1,j,k,n-1)]" target="_blank"><img src="http://latex.codecogs.com/gif.latex?P(i,j,k,n)-P(i,j,k,n-1)\\=\frac{1}{6}[P(i&plus;1,j,k,n-1)-2P(i,j,k,n-1)&plus;P(i-1,j,k,n-1)]" title="P(i,j,k,n)-P(i,j,k,n-1)\\=\frac{1}{6}[P(i+1,j,k,n-1)-2P(i,j,k,n-1)+P(i-1,j,k,n-1)]" /></a></div>
-
-<div align=center><a href="http://www.codecogs.com/eqnedit.php?latex=&plus;\frac{1}{6}[P(i,j&plus;1,k,n-1)-2P(i,j,k,n-1)&plus;P(i,j-1,k,n-1)]\\&plus;\frac{1}{6}[P(i,j,k&plus;1,n-1)-2P(i,j,k,n-1)&plus;P(i,j,k-1,n-1)]" target="_blank"><img src="http://latex.codecogs.com/gif.latex?&plus;\frac{1}{6}[P(i,j&plus;1,k,n-1)-2P(i,j,k,n-1)&plus;P(i,j-1,k,n-1)]\\&plus;\frac{1}{6}[P(i,j,k&plus;1,n-1)-2P(i,j,k,n-1)&plus;P(i,j,k-1,n-1)]" title="+\frac{1}{6}[P(i,j+1,k,n-1)-2P(i,j,k,n-1)+P(i,j-1,k,n-1)]\\+\frac{1}{6}[P(i,j,k+1,n-1)-2P(i,j,k,n-1)+P(i,j,k-1,n-1)]" /></a></div>
-
-等式两边同乘常量<a href="http://www.codecogs.com/eqnedit.php?latex=\frac{1}{\Delta&space;t}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\frac{1}{\Delta&space;t}" title="\frac{1}{\Delta t}" /></a>，由之前章节对拉普拉斯算子的讨论，可将等式化为
-
-<div align=center><a href="http://www.codecogs.com/eqnedit.php?latex=\frac{\partial&space;P(x,y,z,t)}{\partial&space;t}=D\nabla^{2}P(x,y,z,t)" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\frac{\partial&space;P(x,y,z,t)}{\partial&space;t}=D\nabla^{2}P(x,y,z,t)" title="\frac{\partial P(x,y,z,t)}{\partial t}=D\nabla^{2}P(x,y,z,t)" /></a></div>
-
-其中<a href="http://www.codecogs.com/eqnedit.php?latex=D=\frac{1}{6}\frac{(\Delta&space;x)^{2}}{\Delta&space;t}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?D=\frac{1}{6}\frac{(\Delta&space;x)^{2}}{\Delta&space;t}" title="D=\frac{1}{6}\frac{(\Delta x)^{2}}{\Delta t}" /></a>
+其中 ![image]()
 
 我们发现上式与我们之前提到的扩散方程形式完全一样
+ ![image]()
 
-<div align=center><a href="http://www.codecogs.com/eqnedit.php?latex=\frac{\partial&space;\rho&space;}{\partial&space;t}=D\nabla^{2}\rho" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\frac{\partial&space;\rho&space;}{\partial&space;t}=D\nabla^{2}\rho" title="\frac{\partial \rho }{\partial t}=D\nabla^{2}\rho" /></a></div>
+其实，当体系有大量粒子时，他们某一时刻出现在某一位置的概率 ![image]()之和即为该时刻该位置的粒子数密度 ![image]()。
 
-其实，当体系有大量粒子时，他们某一时刻出现在某一位置的概率<a href="http://www.codecogs.com/eqnedit.php?latex=P" target="_blank"><img src="http://latex.codecogs.com/gif.latex?P" title="P" /></a>之和即为该时刻该位置的粒子数密度<a href="http://www.codecogs.com/eqnedit.php?latex=\rho" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\rho" title="\rho" /></a>。
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在一维情况下，我们将粒子数密度函数写为<a href="http://www.codecogs.com/eqnedit.php?latex=\rho&space;(x,t)=\rho&space;(i\Delta&space;x,n\Delta&space;t)=\rho&space;(i,n)" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\rho&space;(x,t)=\rho&space;(i\Delta&space;x,n\Delta&space;t)=\rho&space;(i,n)" title="\rho (x,t)=\rho (i\Delta x,n\Delta t)=\rho (i,n)" /></a>，则对应的扩散方程为
-
-<div align=center><a href="http://www.codecogs.com/eqnedit.php?latex=\frac{\partial&space;\rho&space;}{\partial&space;t}=D\frac{\partial&space;^{2}\rho&space;}{\partial&space;x^{2}}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\frac{\partial&space;\rho&space;}{\partial&space;t}=D\frac{\partial&space;^{2}\rho&space;}{\partial&space;x^{2}}" title="\frac{\partial \rho }{\partial t}=D\frac{\partial ^{2}\rho }{\partial x^{2}}" /></a></div>
+ 在一维情况下，我们将粒子数密度函数写为 ![image]()，则对应的扩散方程为
+ ![image]()
 
 其有限差分形式如下
-
-<div align=center><a href="http://www.codecogs.com/eqnedit.php?latex=\frac{\rho&space;(i,n&plus;1)-\rho&space;(i,n)}{\Delta&space;t}=D\frac{\rho&space;(i&plus;1,n)-2\rho&space;(i,n)&plus;\rho&space;(i-1,n)}{(\Delta&space;x)^{2}}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\frac{\rho&space;(i,n&plus;1)-\rho&space;(i,n)}{\Delta&space;t}=D\frac{\rho&space;(i&plus;1,n)-2\rho&space;(i,n)&plus;\rho&space;(i-1,n)}{(\Delta&space;x)^{2}}" title="\frac{\rho (i,n+1)-\rho (i,n)}{\Delta t}=D\frac{\rho (i+1,n)-2\rho (i,n)+\rho (i-1,n)}{(\Delta x)^{2}}" /></a></div>
+ ![image]()
 
 改写为递推形式有
-
-<div align=center><a href="http://www.codecogs.com/eqnedit.php?latex=\rho&space;(i,n&plus;1)=\rho&space;(i,n)&plus;\frac{D\Delta&space;t}{(\Delta&space;x)^{2}}[\rho&space;(i&plus;1,n)&plus;\rho&space;(i-1,n)-2\rho&space;(i,n)]" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\rho&space;(i,n&plus;1)=\rho&space;(i,n)&plus;\frac{D\Delta&space;t}{(\Delta&space;x)^{2}}[\rho&space;(i&plus;1,n)&plus;\rho&space;(i-1,n)-2\rho&space;(i,n)]" title="\rho (i,n+1)=\rho (i,n)+\frac{D\Delta t}{(\Delta x)^{2}}[\rho (i+1,n)+\rho (i-1,n)-2\rho (i,n)]" /></a></div>
+ ![image]()
 
 可见，如果我们知道粒子的初始分布，就可求得他们之后时刻的分布。
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们首先用以上由扩散方程得到的递推式模拟初始时刻粒子全部聚集在原点的情况。
+ 我们首先用以上由扩散方程得到的递推式模拟初始时刻粒子全部聚集在原点的情况。
 
 #### →[查看程序](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project3-1.py)
 
-<div align=center><img src="https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/figure_6-2.png?raw=true" /></div>
+ ![image]()
 
 如习题**7.9**所说，扩散进行一段时间后，粒子呈正态分布（高斯分布）
 
-<div align=center><a href="http://www.codecogs.com/eqnedit.php?latex=\rho&space;(x,t)=\frac{1}{\sigma&space;}e^{-\frac{x^{2}}{2\sigma&space;^{2}}}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\rho&space;(x,t)=\frac{1}{\sigma&space;}e^{-\frac{x^{2}}{2\sigma&space;^{2}}}" title="\rho (x,t)=\frac{1}{\sigma }e^{-\frac{x^{2}}{2\sigma ^{2}}}" /></a></div>
+ ![image]()
 
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;既然扩散方程可以由大量粒子的格点随机游走得到，那我们不妨试试模拟初始时刻大量粒子聚集在原点的格点随机游走。
+ 既然扩散方程可以由大量粒子的格点随机游走得到，那我们不妨试试模拟初始时刻大量粒子聚集在原点的格点随机游走。
 
 #### →[查看程序](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project3-2.py)
 
-<div align=center><img src="https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/figure_6-1.png?raw=true" /></div>
-
+ ![image]()
+ 
 可见两种方法所得的粒子分布吻合程度相当高，这恰好印证了两种方法的一致性。
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们接下来研究教材提到的奶油在咖啡中溶解的问题。该问题可合理简化为初始时刻在一个正方形区域内均匀分布的粒子的二维扩散问题。我们首先用扩散方程所得递推式进行模拟。
+ 我们接下来研究教材提到的奶油在咖啡中溶解的问题。该问题可合理简化为初始时刻在一个正方形区域内均匀分布的粒子的二维扩散问题。我们首先用扩散方程所得递推式进行模拟。
 
 #### →[查看程序](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project4-1.py)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们用高度表示某一位置的粒子数密度，初始时刻的分布如下
+ 我们用高度表示某一位置的粒子数密度，初始时刻的分布如下
+ ![image]()
 
-<div align=center><img src="https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/figure_8-1%200.png?raw=true" /></div>
+ ![image]()时的分布如下
+ ![image]()
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.codecogs.com/eqnedit.php?latex=n=50" target="_blank"><img src="http://latex.codecogs.com/gif.latex?n=50" title="n=50" /></a>时的分布如下
+ ![image]()>时的分布如下
+ ![image]()
 
-<div align=center><img src="https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/figure_8-2%2050.png?raw=true" /></div>
+ ![image]()时的分布如下
+ ![image]()
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.codecogs.com/eqnedit.php?latex=n=200" target="_blank"><img src="http://latex.codecogs.com/gif.latex?n=200" title="n=200" /></a>时的分布如下
+ ![image]()时的分布如下
+ ![image]()
 
-<div align=center><img src="https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/figure_8-3%20200.png?raw=true" /></div>
+ ![image]()时的分布如下
+ ![image]()
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.codecogs.com/eqnedit.php?latex=n=500" target="_blank"><img src="http://latex.codecogs.com/gif.latex?n=500" title="n=500" /></a>时的分布如下
+ ![image]()>时的分布如下
+ ![image]()
 
-<div align=center><img src="https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/figure_8-4%20500.png?raw=true" /></div>
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.codecogs.com/eqnedit.php?latex=n=1000" target="_blank"><img src="http://latex.codecogs.com/gif.latex?n=1000" title="n=1000" /></a>时的分布如下
-
-<div align=center><img src="https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/figure_8-5%201000.png?raw=true" /></div>
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.codecogs.com/eqnedit.php?latex=n=2000" target="_blank"><img src="http://latex.codecogs.com/gif.latex?n=2000" title="n=2000" /></a>时的分布如下
-
-<div align=center><img src="https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/figure_8-6%202000.png?raw=true" /></div>
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.codecogs.com/eqnedit.php?latex=n=4000" target="_blank"><img src="http://latex.codecogs.com/gif.latex?n=4000" title="n=4000" /></a>时的分布如下
-
-<div align=center><img src="https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/figure_8-7%204000.png?raw=true" /></div>
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;为了更清楚地理解扩散方程和随机游走的联系，我们再用随机游走的方法模拟这个问题
+为了更清楚地理解扩散方程和随机游走的联系，我们再用随机游走的方法模拟这个问题
 
 #### →[查看程序](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project4-2.py)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;模拟所得不同时刻的粒子分布如下
-
-<div align=center><img src="https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/figure_1-3.png?raw=true" /></div>
+ 模拟所得不同时刻的粒子分布如下
+ ![image]()
 
 可以看出，两种方法所得的粒子分布情况是一致的。
 
 #### Ⅲ 扩散过程中的熵
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如之前所说，熵的统计学定义为
-
-<div align=center><a href="http://www.codecogs.com/eqnedit.php?latex=S=-k\sum_{s}^{&space;}P_{s}\ln&space;P_{s}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?S=-k\sum_{s}^{&space;}P_{s}\ln&space;P_{s}" title="S=-k\sum_{s}^{ }P_{s}\ln P_{s}" /></a></div>
+如之前所说，熵的统计学定义为
+ ![image]()
 
 运用该式，我们就可计算各种过程中的熵。
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;下面我们就按习题**7.12**的要求来模拟计算奶油在咖啡中溶解过程中的熵随时间的变化。
+ 
+ 下面我们就按习题**7.12**的要求来模拟计算奶油在咖啡中溶解过程中的熵随时间的变化。
 
 #### →[查看程序](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project5-1.py)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;模拟所得扩散过程中不同时刻的熵如下
-
-<div align=center><img src="https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/figure_7-1.png?raw=true" /></div>
+ 模拟所得扩散过程中不同时刻的熵如下
+ ![image]()
 
 可以看出，在奶油溶解的过程中，体系的熵一直在增加，且熵随时间（步数）变化的函数图像大致为一个向左平移后的对数函数。
 
-###4. 结果讨论
+### 四、总结
+1.扩散过程的本质是大量粒子的随机游走，但扩散方程本身却是确定性的。\
+2.用确定性的扩散方程和大量粒子随机游走模拟得到相同的结果，这昭示了大量在微观上行为服从一定概率分布的粒子在宏观上有确定性的规律来描述其行为。
+3.扩散是一个自发行为，而伴随着这个自发行为，系统的熵自发地增加。
 
-* 扩散过程的本质是大量粒子的随机游走，但扩散方程本身却是确定性的。
-
-* 用确定性的扩散方程和大量粒子随机游走模拟得到相同的结果，这昭示了大量在微观上行为服从一定概率分布的粒子在宏观上有确定性的规律来描述其行为。
-
-* 扩散是一个自发行为，而伴随着这个自发行为，系统的熵自发地增加。
+    
+### 五、致谢
+    感谢彭成铭倪、世杰同学鼎力相助~。
 
 ---
 
@@ -339,13 +319,3 @@
 
 **[4]**Martin Evans.Plotting 3D random walk in Python[EB/OL].http://stackoverflow.com/questions/34920680/plotting-3d-random-walk-in-python ，2016. 
 
-
-
-
-
-### 四、总结
-1.可以看出α不同时，李雅普诺夫指数截然不同；相同α下，不同的初始距离d可能导致李雅普诺夫指数的些微不同\
-2.α越小曲线越密集，这说明系统经历了更多状态，可以预见，当α足够大即台球桌足够长时混沌现象可能会消失
-    
-### 五、致谢
-    感谢彭成铭倪、世杰同学鼎力相助~。
