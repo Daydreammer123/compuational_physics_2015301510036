@@ -229,7 +229,7 @@
 
  我们首先用以上由扩散方程得到的递推式模拟初始时刻粒子全部聚集在原点的情况。
 
-→[[程序2-1]](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project3-1.py)
+→[[程序2-1]](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/files/%E7%A8%8B%E5%BA%8F2-1.py)
 
  ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0211.png)
 
@@ -239,7 +239,7 @@
 
 #### ② 我们接下来研究教材提到的奶油在咖啡中溶解的问题。该问题可合理简化为初始时刻在一个正方形区域内均匀分布的粒子的二维扩散问题。我们首先用扩散方程所得递推式进行模拟。
 
-→[[程序2-2]](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project4-1.py)
+→[[程序2-2]](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/files/%E7%A8%8B%E5%BA%8F2-2.py)
 
  我们用高度表示某一位置的粒子数密度，初始时刻的分布如下
  ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0213.png)
@@ -261,7 +261,7 @@
  
  下面我们就按习题T7.12的要求来模拟计算奶油在咖啡中溶解过程中的熵随时间的变化。
 
-→[[程序3-1]](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project5-1.py)
+→[[程序3-1]](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/files/%E7%A8%8B%E5%BA%8F3-1.pyy)
 
  模拟所得扩散过程中不同时刻的熵如下\
  ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0219.png)
