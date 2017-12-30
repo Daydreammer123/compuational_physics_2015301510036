@@ -30,7 +30,7 @@
   
   ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/3003.png)
   
-    由于有效步长a 和Δt 无法观察，要想证实扩散与粘滞仅仅是热运动的两个方面，我们还需要第三个关系。爱因斯坦注意到a 和Δt 的关系，按照推到理想气体定律的思路：(a/Δt)2=kBT/m，联合起来就构成爱因斯坦第一扩散公式：ζD=kBT。越小的颗粒受到摩擦阻力越小，但扩散系数会更大，更容易扩散。ζD 的乘积提供了一个可证伪的预言来检验“热即分子的无规则运动”；这个预言提出不久就立刻被佩兰（Jeans Perrin）和其他人的实验所证实。任何无规则行走携带的守恒量都各自对应一个扩散定律。\
+由于有效步长a 和Δt 无法观察，要想证实扩散与粘滞仅仅是热运动的两个方面，我们还需要第三个关系。爱因斯坦注意到a 和Δt 的关系，按照推到理想气体定律的思路：(a/Δt)2=kBT/m，联合起来就构成爱因斯坦第一扩散公式：ζD=kBT。越小的颗粒受到摩擦阻力越小，但扩散系数会更大，更容易扩散。ζD 的乘积提供了一个可证伪的预言来检验“热即分子的无规则运动”；这个预言提出不久就立刻被佩兰（Jeans Perrin）和其他人的实验所证实。任何无规则行走携带的守恒量都各自对应一个扩散定律。\
      扩散以一个初始分布释放大量的无规则行走，观察他们的密度就会得到分布函数。1855年法国生理学家阿道夫·菲克提出了描述扩散规律的基本公式——菲克定律。
      
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/3004.gif)
@@ -70,147 +70,126 @@
   
 ### 三、正文
 * 1、点阵随机游走
+①我们先考虑随机游走模型中相对简单的情形，一个行人以固定步幅在一条直线上等概率地沿两个方向之一行走。为使结果更具普遍性，我们假设同时有若干人在随机游走，研究他们走完每一步后与原点之间的平均距离。
 
-一个最流行的随机游走模型就是规则点阵上的随机游走，每一步对象的位置根据某种概率分布从一个阵点跳跃到另一个阵点上。
+实现该程序的关键是如何模拟行人们等几率的向两个方向行走。我们可以通过产生一个介于0和1之间的随机数r来实现：若r<0.5，则行人向右走一步，否则行人向左走一步。
 
-①其中,最简单的情形就是一个行人以固定步幅在一条直线上等概率地沿两个方向之一行走。
-为使结果更具普遍性，我们假设同时有若干人在随机游走，研究他们走完每一步后与原点之间的平均距离。
+ →[程序1-1](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project1-1.py)
 
-显然，实现该程序的关键是如何模拟行人们等几率的向两个方向行走。我们可以通过产生一个介于  ![image]()和  ![image]()之间的随机数  ![image]()来实现：若  ![image]()，则行人向右走一步，否则行人向左走一步。
+我们取行人人数为10000，模拟三次得如下结果
+ ![image](0101)
+可以看出10000名行人的平均位移![](http://latex.codecogs.com/gif.latex?\bar{x})在0附近波动且波动幅度随n增大，但![](http://latex.codecogs.com/gif.latex?\bar{x})的期望值大致为0，这是由于
 
-## →[查看程序](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project1-1.py)
+ ![image](0102)
 
-②我们取行人人数为10000，模拟三次得如下结果
- ![image]()
-可以看出10000名行人的平均位移 ![image]()在 ![image]()附近波动且波动幅度随 ![image]()增大，但 ![image]()的期望值大致为 ![image]()，这是由于
+③下面我们具体研究![](http://latex.codecogs.com/gif.latex?\bar{x})的波动幅度与步数n的关系。
 
- ![image]()
+ →[程序1-2](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project1-2.py)
 
-③下面我们具体研究 ![image]()的波动幅度与步数 ![image]()的关系。
-
-## →[查看程序](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project1-2.py)
-
-下图是一次模拟中 ![image]()随步数的变化
- ![image]()
-可以看出， ![image]()的值大致等于步数 ![image]()。接下来我们从理论上具体分析原因：
+下图是一次模拟中![](http://latex.codecogs.com/gif.latex?\bar{x^{2}})随步数的变化
+ ![image](0103)
+可以看出，![](http://latex.codecogs.com/gif.latex?\bar{x^{2}})的值大致等于步数n。接下来我们从理论上具体分析原因：
 
 因为
 
- ![image]()
+ ![image](0104)
 
-而 ![image]()与 ![image]()是相互独立的随机变量，故有
+而![](http://latex.codecogs.com/gif.latex?s_{ij1})与![](http://latex.codecogs.com/gif.latex?s_{ij2})是相互独立的随机变量，故有
 
- ![image]()
+ ![image](0105)
 
 从而有
 
- ![image]()
+ ![image](0106)
 
- 接下来，我们取消步长为固定值的限制，使每步的位移在 ![image]()间等概率随机取值。
+③接下来，我们取消步长为固定值的限制，使每步的位移在 ![image]()间等概率随机取值。
 
-## →[查看程序](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project1-3.py)
+→[程序1-3](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project1-3.py)
 
  我们同样取行人人数为10000，模拟三次得如下结果
- ![image]()
+ ![image](0107)
 
-同样我们可以看出 ![image]()在 ![image]()附近波动，但波动幅度却明显比之前要小。
+同样我们可以看出![](http://latex.codecogs.com/gif.latex?\bar{x})在0附近波动，但波动幅度却明显比之前要小。
 
-显然，由于每步的位移 ![image]()服从均匀分布 ![image]()，有
+显然，由于每步的位移s服从均匀分布U[-1,1]，有
 
- ![image]()
+ ![image](0108)
 从而由之前讨论知
 
- ![image]()
+ ![image](0109)
 
 
- 下面我们具体研究 ![image]()的波动幅度与步数 ![image]()的关系。
+ ④下面我们具体研究![](http://latex.codecogs.com/gif.latex?\bar{x})的波动幅度与步数n的关系。
 
- ## →[查看程序](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project1-4.py)
+→[程序1-4](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project1-4.py)
 
 
- 下图是一次模拟中 ![image]()随步数的变化
+ 下图是一次模拟中![](http://latex.codecogs.com/gif.latex?\bar{x^{2}})随步数n的变化
 
- ![image]()
+ ![image](0110)
 
-可以看出， ![image]()成正比，但其值要比之前小很多。下面我们从理论上给出解释：
+可以看出，![](http://latex.codecogs.com/gif.latex?\bar{x^{2}})的值虽然与步数n仍成正比，但其值要比之前小很多。
 
-由 ![image]()，有
+ ⑤下面，我们按照T7.3所说，研究当行人向两个方向移动的概率不等时的情况，我们取向左移动的概率为0.25，从而向右移动的概率为0.75。
 
- ![image]()
-
-故而由前讨论有
-
- ![image]()
-
-显然，这与模拟所得图像高度一致。
-
- 下面，我们按照**习题7.3**所说，研究当行人向两个方向移动的概率不等时的情况，我们取向左移动的概率 ![image]()，从而向右移动的概率 ![image]()。
-
- ## →[查看程序](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project1-5.py)
+ →[程序1-5](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project1-5.py)
 
  我们同样取行人人数为10000，模拟三次得如下结果
- ![image]()
+ ![image](0111)
 
-不难看出， ![image]()的值约为步数 ![image]()。
+不难看出，![](http://latex.codecogs.com/gif.latex?\bar{x^{2}})的值约为步数n的1/2。
 
 又由之前讨论有
- ![image]()
+ ![image](0112)
 
 显然，这与模拟结果一致。
 
- 接着我们具体研究 ![image]()与步数 ![image]()>的关系。
+ ⑥接着我们具体研究![](http://latex.codecogs.com/gif.latex?\bar{x^{2}})与步数n的关系。
 
- ## →[查看程序](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project1-6.py)
+→[程序1-6](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project1-6.py)
 
- 下图是一次模拟中 ![image]()随步数的变化
- ![image]()
+ 下图是一次模拟中![](http://latex.codecogs.com/gif.latex?\bar{x^{2}})随步数的变化
+ ![image](0113)
 
 
-从拟合曲线可知， ![image]()大致是 ![image]()的二次函数。
+从拟合曲线可知，![](http://latex.codecogs.com/gif.latex?\bar{x^{2}})大致是n的二次函数。
 
-由于该种情况下， ![image]()，则有
-
- ![image]()
+且该种情况下有， ![image](0114)
 
 经验算，所得曲线和该式符合很好。
 
+⑦为了更直观地理解随机行走的过程，我们可以使用python中的turtle模块绘制二维点阵随机游走示意动画。
 
- 为了更直观地理解随机行走的过程，我们可以使用python中的turtle模块绘制二维点阵随机游走示意动画。
+→[程序1-7-1](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project2-1.py)
 
- ## →[查看程序](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project2-1.py)
+这是17*17网格上的随机游走动画
 
-这是 ![image]()网格上的随机游走动画
+ ![image](0115)
 
- ![image]()
+→[程序1-7-2](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project2-2.py)
 
- ## →[查看程序](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project2-2.py)
+ 这是 33*33网格上的随机游走动画
 
- 这是 ![image]()网格上的随机游走动画
-
- ![image]()
+ ![image](0116)
 
 我们可以看出红色箭头会在出发点附近一定大小的区域内游走相当长的时间。事实上，对于一维和二维点阵随机游走，只要步数足够大，任意游动的点必定能返回它的出发点，该定理是著名数学家波利亚在1921年证明的。
 
- 接着，我们模拟在每一步的方向和步幅都随机的情况下的二维随机游走轨迹。
+ ⑧接着，我们模拟在每一步的方向和步幅都随机的情况下的二维随机游走轨迹。
 
- ## →[查看程序](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project2-3.py)
+→[程序1-8](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project2-3.py)
 
- 下面是三次模拟的轨迹图
- ![image]()
- ![image]()
- ![image]()
+ 下面是模拟的轨迹图
+ ![image](0117)
 
- 此外，我们还可以较为容易地模拟三维点阵随机游走的轨迹。
 
- ## →[查看程序](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project2-4.py)
+ ⑨此外，我们还可以较为容易地模拟三维点阵随机游走的轨迹。
 
- 下面是三次模拟的轨迹图
+ #→[程序1-9](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project2-4.py)
 
- ![image]()
+ 下面是模拟的轨迹图
 
- ![image]()
+ ![image](0118)
 
- ![image]()
 
  我们可以看出多数情况下，动点出发后离原点越来越远，没有返回出发点的迹象。实际上，波利亚也证明了在三维网格中随机游走，最终能回到出发点的概率只有大约 34% ，而且随着维度的增 加，回到出发点的概率将变得越来越低。在四维网格中随机游走，最终能回到出发点 的概率是 19.3% ，而在八维空间中，这个概率只有 7.3% 。 
 
