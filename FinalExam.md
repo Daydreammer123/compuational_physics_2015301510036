@@ -82,7 +82,7 @@
 
  ![image](0102)
 
-③下面我们具体研究![](http://latex.codecogs.com/gif.latex?\bar{x})的波动幅度与步数n的关系。
+②下面我们具体研究![](http://latex.codecogs.com/gif.latex?\bar{x})的波动幅度与步数n的关系。
 
  →[程序1-2](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project1-2.py)
 
@@ -196,98 +196,71 @@
 * 2、扩散
  我们之前曾提到，随机游走和扩散是等价的，宏观上观测到的扩散现象其实就是大量粒子的随机游走行为。下面为了研究扩散问题的处理方法，我们讨论单个粒子在简单立方点阵中的随机游走。
 
- 记* 1、为粒子在 ![image]()步）出现在点 ![image]()处的概率。要使粒子在 ![image]()时刻出现在点 ![image]()，则在 ![image]()时刻，粒子必须在与 ![image]()相邻的六个阵点上，又从每个相邻阵点运动到 ![image]()的概率为 ![image]()，则有如下递推式
- ![image]()
+ 记![](http://latex.codecogs.com/gif.latex?P\left(i,j,k,n\right))为粒子在n时刻 出现在点![](http://latex.codecogs.com/gif.latex?\left(i,j,k\right))处的概率。要使粒子在n时刻出现在点![](http://latex.codecogs.com/gif.latex?\left(i,j,k\right)))，则在n-1时刻，粒子必须在与[](http://latex.codecogs.com/gif.latex?\left(i,j,k\right))相邻的六个阵点上，又从每个相邻阵点运动到[](http://latex.codecogs.com/gif.latex?\left(i,j,k\right))的概率为1/6，则有如下递推式
+ ![image](0201)
 
 改写上式，可得
- ![image]()
- ![image]()
+ ![image](0202)
  
-等式两边同乘常量 ![image]()，由之前章节对拉普拉斯算子的讨论，可将等式化为
- ![image]()
+等式两边同乘常量 ![image](0203)，由之前章节对拉普拉斯算子的讨论，可将等式化为
+ ![image](0204)
 
-其中 ![image]()
+其中 ![image](0205)
 
 我们发现上式与我们之前提到的扩散方程形式完全一样
- ![image]()
+ ![image](0206)
 
-其实，当体系有大量粒子时，他们某一时刻出现在某一位置的概率 ![image]()之和即为该时刻该位置的粒子数密度 ![image]()。
+其实，当体系有大量粒子时，他们某一时刻出现在某一位置的概率 P之和即为该时刻该位置的粒子数密度。
 
- 在一维情况下，我们将粒子数密度函数写为 ![image]()，则对应的扩散方程为
- ![image]()
+ ①在一维情况下，我们将粒子数密度函数写为 ![image](0207)，则对应的扩散方程为
+ ![image](0208)
 
 其有限差分形式如下
- ![image]()
+ ![image](0209)
 
 改写为递推形式有
- ![image]()
+ ![image](0210)
 
 可见，如果我们知道粒子的初始分布，就可求得他们之后时刻的分布。
 
  我们首先用以上由扩散方程得到的递推式模拟初始时刻粒子全部聚集在原点的情况。
 
-#### →[查看程序](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project3-1.py)
+→[程序2-1](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project3-1.py)
 
- ![image]()
+ ![image](0211)
 
-如习题**7.9**所说，扩散进行一段时间后，粒子呈正态分布（高斯分布）
+如习题T7.9所说，扩散进行一段时间后，粒子呈正态分布（高斯分布）
 
- ![image]()
+ ![image](0212)
 
- 既然扩散方程可以由大量粒子的格点随机游走得到，那我们不妨试试模拟初始时刻大量粒子聚集在原点的格点随机游走。
+② 我们接下来研究教材提到的奶油在咖啡中溶解的问题。该问题可合理简化为初始时刻在一个正方形区域内均匀分布的粒子的二维扩散问题。我们首先用扩散方程所得递推式进行模拟。
 
-#### →[查看程序](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project3-2.py)
-
- ![image]()
- 
-可见两种方法所得的粒子分布吻合程度相当高，这恰好印证了两种方法的一致性。
-
- 我们接下来研究教材提到的奶油在咖啡中溶解的问题。该问题可合理简化为初始时刻在一个正方形区域内均匀分布的粒子的二维扩散问题。我们首先用扩散方程所得递推式进行模拟。
-
-#### →[查看程序](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project4-1.py)
+→[程序2-2](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project4-1.py)
 
  我们用高度表示某一位置的粒子数密度，初始时刻的分布如下
- ![image]()
+ ![image](0213)
 
- ![image]()时的分布如下
- ![image]()
+当n=50时的分布如下
+ ![image](0214)
 
- ![image]()>时的分布如下
- ![image]()
+当n=500时的分布如下
+ ![image](0216)
 
- ![image]()时的分布如下
- ![image]()
+当n=4000时的分布如下
+ ![image](0217)
 
- ![image]()时的分布如下
- ![image]()
-
- ![image]()时的分布如下
- ![image]()
-
- ![image]()>时的分布如下
- ![image]()
-
-为了更清楚地理解扩散方程和随机游走的联系，我们再用随机游走的方法模拟这个问题
-
-#### →[查看程序](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project4-2.py)
-
- 模拟所得不同时刻的粒子分布如下
- ![image]()
-
-可以看出，两种方法所得的粒子分布情况是一致的。
-
-#### Ⅲ 扩散过程中的熵
+* 3扩散过程中的熵
 如之前所说，熵的统计学定义为
- ![image]()
+ ![image](0218）
 
 运用该式，我们就可计算各种过程中的熵。
  
- 下面我们就按习题**7.12**的要求来模拟计算奶油在咖啡中溶解过程中的熵随时间的变化。
+ 下面我们就按习题T7.12的要求来模拟计算奶油在咖啡中溶解过程中的熵随时间的变化。
 
-#### →[查看程序](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project5-1.py)
+→[程序3-1](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project5-1.py)
 
  模拟所得扩散过程中不同时刻的熵如下
- ![image]()
+ ![image](0219）
 
 可以看出，在奶油溶解的过程中，体系的熵一直在增加，且熵随时间（步数）变化的函数图像大致为一个向左平移后的对数函数。
 
@@ -302,7 +275,7 @@
 
 ---
 
-<h4 align="center">参考文献</h4>
+#### 参考文献
 
 **[1]**Nicholas J. Giordano，Hisao Nakanishi. 计算物理（第2版）[M]. 北京：清华大学出版社，2007.181-206.
 
