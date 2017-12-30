@@ -202,9 +202,9 @@
  ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0201.png)
 
 改写上式，可得
- ![image](0https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0202.png)
+ ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0202.png)
  
-等式两边同乘常量 ![image](0203)，由之前章节对拉普拉斯算子的讨论，可将等式化为
+等式两边同乘常量 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0203.png)，由之前章节对拉普拉斯算子的讨论，可将等式化为
  ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0204.png)
 
 其中 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0205.png)
@@ -214,7 +214,9 @@
 
 其实，当体系有大量粒子时，他们某一时刻出现在某一位置的概率 P之和即为该时刻该位置的粒子数密度。
 
-#### ①在一维情况下，我们将粒子数密度函数写为 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0207.png)，则对应的扩散方程为
+#### ①在一维情况下，
+我们将粒子数密度函数写为 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0207.png)，
+则对应的扩散方程为
  ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0208.png)
 
 其有限差分形式如下
@@ -252,8 +254,8 @@
  ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0217.png)
 
 * 3扩散过程中的熵
-如之前所说，熵的统计学定义为
- ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0218.png）
+如之前所说，熵的统计学定义为\
+ ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0218.png)
 
 运用该式，我们就可计算各种过程中的熵。
  
@@ -261,8 +263,8 @@
 
 →[[程序3-1]](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project5-1.py)
 
- 模拟所得扩散过程中不同时刻的熵如下
- ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0219.png）
+ 模拟所得扩散过程中不同时刻的熵如下\
+ ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0219.png)
 
 可以看出，在奶油溶解的过程中，体系的熵一直在增加，且熵随时间（步数）变化的函数图像大致为一个向左平移后的对数函数。
 
