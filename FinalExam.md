@@ -189,12 +189,12 @@
 
  下面是模拟的轨迹图
 
- ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0118.png)
+ ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0118.gif)
 
 
  我们可以看出多数情况下，动点出发后离原点越来越远，没有返回出发点的迹象。实际上，波利亚也证明了在三维网格中随机游走，最终能回到出发点的概率只有大约 34% ，而且随着维度的增 加，回到出发点的概率将变得越来越低。在四维网格中随机游走，最终能回到出发点 的概率是 19.3% ，而在八维空间中，这个概率只有 7.3% 。 
 
-#### * 2、扩散:\
+#### * 2、扩散:
  我们之前曾提到，随机游走和扩散是等价的，宏观上观测到的扩散现象其实就是大量粒子的随机游走行为。
  下面为了研究扩散问题的处理方法，我们讨论单个粒子在简单立方点阵中的随机游走。
 
@@ -253,7 +253,7 @@
 当n=4000时的分布如下
  ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0217.png)
 
-#### * 3扩散过程中的熵
+#### * 3、熵
 如之前所说，熵的统计学定义为\
  ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0218.png)
 
