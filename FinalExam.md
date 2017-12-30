@@ -75,7 +75,7 @@
 
   实现该程序的关键是如何模拟行人们等几率的向两个方向行走。我们可以通过产生一个介于0和1之间的随机数r来实现：若r<0.5，则行人向右走一步，否则行人向左走一步。
 
- →[[程序1-1]](https://github.com/ACGNnsj/compuational_physics_N2014301020001/blob/master/Final%20Project/Final%20Project1-1.py)
+ →[[程序1-1]](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/files/%E7%A8%8B%E5%BA%8F1-1.py)
 
   我们取行人人数为10000，模拟三次得如下结果
  ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/0101.png)
