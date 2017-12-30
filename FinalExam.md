@@ -11,6 +11,7 @@
   
 - 随机游走：\
     随机游走（random walk）也称随机漫步，随机行走等是指基于过去的表现，无法预测将来的发展步骤和方向。核心概念是指任何无规则行走者所带的守恒量都各自对应着一个扩散运输定律 ，接近于布朗运动，是布朗运动理想的数学状态，现阶段主要应用于互联网链接分析及金融股票市场中。在我们生活中处处都存在着与Random Walk有关的自然现象，例如气体分子的运动，滴入水中的墨水，气味的扩散等。Random Walk是扩散过程的基础，因此它被广泛地用于对物理和化学等扩散现象的模拟上。\ 
+    
     ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/3001.jpg)
   
 - 无规则行走：\
@@ -20,26 +21,38 @@
   (a)二维无规则行走；\
   (b)当步骤更多，步幅更低时二维无规则行走；\
   (c)三维无规则行走。\
+  
   ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/3002.jpg)
   
 - 扩散定律：\
     扩散以一个初始分布释放大量的无规则行走，观察他们的密度，就会得到分布函数。\
   扩散是一个随机涨落的过程，在本科一年级的物理课程已经提及一个落体最终会达到取决于摩擦的“末速度”。以悬浮颗粒来考虑摩擦，颗粒虽然受随机碰撞，仍获得了一个净漂移速度。v=f/ζ ，ζ=2m/Δt ，其中ζ是黏性摩擦系数，与扩散系数一样可以实验测量。摩擦源于物理实体与周围热致扰动的流体随机碰撞。每一种颗粒当置于不同的溶剂中时都会有相应特征D（扩散系数）和ζ。\
+  
   ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/3003.pgn)
+  
     由于有效步长a 和Δt 无法观察，要想证实扩散与粘滞仅仅是热运动的两个方面，我们还需要第三个关系。爱因斯坦注意到a 和Δt 的关系，按照推到理想气体定律的思路：(a/Δt)2=kBT/m，联合起来就构成爱因斯坦第一扩散公式：ζD=kBT。越小的颗粒受到摩擦阻力越小，但扩散系数会更大，更容易扩散。ζD 的乘积提供了一个可证伪的预言来检验“热即分子的无规则运动”；这个预言提出不久就立刻被佩兰（Jeans Perrin）和其他人的实验所证实。任何无规则行走携带的守恒量都各自对应一个扩散定律。\
-     扩散以一个初始分布释放大量的无规则行走，观察他们的密度就会得到分布函数。1855年法国生理学家阿道夫·菲克提出了描述扩散规律的基本公式——菲克定律。   
+     扩散以一个初始分布释放大量的无规则行走，观察他们的密度就会得到分布函数。1855年法国生理学家阿道夫·菲克提出了描述扩散规律的基本公式——菲克定律。
+     
 ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/3004.gif)
    
    ①菲克第一定律,假设从高浓度区域往低浓度流的通量大小与浓度梯度（空间导数）成正比，通过这个假设，菲克第一定律把扩散通量与浓度联系起来。在一维空间下的菲克第一定律如下： 
+   
  ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/3005.pgn)  
-  根据斯托克斯-爱因斯坦关系，D的大小取决于温度、流体黏度与分子大小，并与扩散分子流动的平均速度平方成正比。
+ 
+ 根据斯托克斯-爱因斯坦关系，D的大小取决于温度、流体黏度与分子大小，并与扩散分子流动的平均速度平方成正比。
   
    ②在二维或以上的情况下，我们必须把第一导数通用化，得
-   ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/3006.pgn) 
+  
+  ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/3006.pgn) 
+  
   菲克第二定律预测扩散会如何使得浓度随时间改变：
+  
   ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/3007.pgn)
+  
   对于二维或以上的扩散，其菲克第二定律为：
+  
   ![image](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/pictures/3008.pgn)  
+  
   其形式跟热传导方程类似。
  
 - 熵: \
