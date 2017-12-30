@@ -270,22 +270,27 @@
 
 ### 四、总结
 1.扩散过程的本质是大量粒子的随机游走，但扩散方程本身却是确定性的。\
-2.用确定性的扩散方程和大量粒子随机游走模拟得到相同的结果，这昭示了大量在微观上行为服从一定概率分布的粒子在宏观上有确定性的规律来描述其行为。
+2.用确定性的扩散方程和大量粒子随机游走模拟得到相同的结果，这昭示了大量在微观上行为服从一定概率分布的粒子在宏观上有确定性的规律来描述其行为。\
 3.扩散是一个自发行为，而伴随着这个自发行为，系统的熵自发地增加。
 
     
 ### 五、致谢
-    感谢彭成铭倪、世杰同学鼎力相助~。
+    感谢彭成铭倪、世杰同学的指导和点播。
 
 ---
 
 ### 参考文献
 
-[1]Nicholas J. Giordano，Hisao Nakanishi. 计算物理（第2版）[M]. 北京：清华大学出版社，2007.181-206.
+[1]Nicholas J. Giordano，Hisao Nakanishi. Computational Physics[M]. Tsinghua University Press, December 2007
 
-[2] Y. Daniel Liang.RandomWalk[EB/OL].http://www.cs.armstrong.edu/liang/py/html/RandomWalk.html ，2016.
+[2] Martin Evans.Plotting 3D random walk in Python[EB/OL]，2016. 
 
-[3] tacaswell.Problems plotting a 2D random walk with Python[EB/OL].http://stackoverflow.com/questions/27282835/problems-plotting-a-2d-random-walk-with-python ，2014.
+[3] Tacaswell.Problems plotting a 2D random walk with Python[EB/OL]，2014.
 
-[4] Martin Evans.Plotting 3D random walk in Python[EB/OL].http://stackoverflow.com/questions/34920680/plotting-3d-random-walk-in-python ，2016. 
+[4] Y. Daniel Liang.RandomWalk[EB/OL] ，2016.
+
+[5] The senior,ZhouWeiqing's report
+
+[6] wikipedia
+
 
