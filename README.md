@@ -29,8 +29,6 @@ ps所有的作业一直都是用Python3.6版本写的……希望老师能换3.6
 - [x] [Exercise_10](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/Homework_10.md): p118页4.16题.
 - [x] [Exercise_11](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/Homework_11.md): p143页5.3题.
 - [x] [Exercise_12](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/Homework_12.md): p164页6.6题.
-* [Exercise_13](https://?): Chapter 5 problem 5.3,problem 5.7,problem 5.16.
-* [Exercise_14](https://?): Chapter 6 problem 6.6,problem 6.12,problem 6.16.
-* [Exercise_15](https://?): Chapter 7 problem 7.3,problem 7.6,problem 7.10,problem 7.13.
+
 ---
-* [期末论文](https://?): 自由选题（可以综合书上习题），程序必须自己编写，A4两张双面打印（四面），论文写作规范.
+- [x] [期末论文](https://github.com/lilyechoC/compuational_physics_2015301510036/blob/master/FinalExam.md): 感谢蔡老师一学期来的孜孜不倦，谢谢！
